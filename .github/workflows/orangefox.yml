@@ -1,0 +1,49 @@
+name: Build OrangeFox RMX2121CN
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: orangefox-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 350
+    defaults:
+      run:
+        shell: bash
+    env:
+      BUILD_ROOT: ${{ github.workspace }}/fox_12.1
+      ARTIFACT_DIR: ${{ github.workspace }}/artifacts
+      JOBS: '4'
+      LC_ALL: C
+    steps:
+      - name: Check out the device tree
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Prepare the disposable build runner
+        run: bash scripts/prepare-runner.sh
+
+      - name: Sync official OrangeFox 12.1 sources
+        run: |
+          mkdir -p "$ARTIFACT_DIR"
+          bash scripts/sync-sources.sh "$BUILD_ROOT" 2>&1 | tee "$ARTIFACT_DIR/sync.log"
+
+      - name: Build and inspect the recovery
+        run: bash scripts/build.sh "$BUILD_ROOT" 2>&1 | tee "$ARTIFACT_DIR/build.log"
+
+      - name: Upload candidate images and logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: OrangeFox-RMX2121CN-${{ github.run_number }}
+          path: artifacts/
+          if-no-files-found: warn
+          retention-days: 14

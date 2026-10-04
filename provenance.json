@@ -1,0 +1,521 @@
+{
+  "upstream_url": "https://github.com/zeng-github01/android_device_realme_RMX2121",
+  "upstream_branch": "twrp-12.1_cn",
+  "upstream_commit": "f18bb09091104cdfc92417c111037110de924327",
+  "sync_url": "https://gitlab.com/OrangeFox/sync",
+  "sync_commit": "53a303ecfb622c516082d3e61dbaa7d9f02f0120",
+  "backup_recovery_sha256": "82754800595758a987f05ec422b43f152c597c0eb5334a20847e5520462bb8c3",
+  "boot_components": [
+    {
+      "name": "kernel",
+      "matches_backup": true,
+      "sha256": "16aa83fe3fcff046ab57aa17300df75e959bc8df50fc2143704925eda84dac7e"
+    },
+    {
+      "name": "dtbo",
+      "matches_backup": true,
+      "sha256": "6d99889b0f9774bf5aeb6e3a732b88cb0e567802f6b74cf7ef67a9c70a686649"
+    },
+    {
+      "name": "dtb",
+      "matches_backup": true,
+      "sha256": "11c7a94d35c97a9c6c69c4462c87e3e5195520c46747f36137f2cfc8152695ae"
+    }
+  ],
+  "binary_comparison": [
+    {
+      "path": "vendor/bin/mcDriverDaemon",
+      "sha256": "aa981a0c6e6f277640a30cd7739cec59ccc659356e0baa3bc5e8d4d158c78ce0",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/aw8697_haptic_170.bin",
+      "sha256": "122ab2ac075633becb64a3f656556754cac0fd09fc505642194187718f50a071",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/aw8697_haptic_235.bin",
+      "sha256": "148c5bce8f66dec2d12b7410672b83a9868515628497f9e4451bf9f42b9a1482",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/aw8697_rtp.bin",
+      "sha256": "9a413b131ecf0ccfb02a837ddb33766d8604cc00da7937b79bd363b53c8d7d86",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libion_mtk.so",
+      "sha256": "f0b2976b9215977ceeac5f3517787818c0b9440fba68e8104227d6399a44cbcf",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libion_ulit.so",
+      "sha256": "d3a71942d2b41fb3ce4f85f8fcf1ce8202e3d22d70e1bc0b1f62d8cce9cd139d",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libkeymaster4.so",
+      "sha256": "070f141213c33cce89e564a2a49d0e7ff24c9db0eda82cf83164f58d7da447dd",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libkeymaster41.so",
+      "sha256": "274b529397d253b955d073057d18ff86728131df480dae2a507e2b5218b67f4f",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libkeymaster4support.so",
+      "sha256": "576739a7f4a2cefc415363a8433fbc2e74f26a700b11cf178aa13f319983ef1f",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libkeymaster4_1support.so",
+      "sha256": "4b2142f53fbcb2eb9644e3a693bdb5bc7c70a8ce9116d0f06b789a98c49567c7",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libkeymaster_messages.so",
+      "sha256": "aab8180e9c627f74dcc43291941f825d171e983d7b25bf16fdde17365c298283",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libkeymaster_portable.so",
+      "sha256": "75576b48966f70393481a4b12fc939598144b2c55133802e892cf0e0e58dcc66",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libladder.so",
+      "sha256": "e47c0f9f46bfd53dad9c429f2431009be10d55570f797bfffa35cac524874a2f",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libMcClient.so",
+      "sha256": "be6362724e72fe1a7cba5236be4e69b58d7956c05085340a4a294ebc741601b1",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libpuresoftkeymasterdevice.so",
+      "sha256": "4ac89fe247a9764720d062b3b6e4a2912267e57a0f6edaba3e5cfcd196fadd3c",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libTEECommon.so",
+      "sha256": "3f19fdec360909480c45c2ae433119eb72a36e2817fbad6b3726ba457694b9b4",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/libtrustonic_keybox_ca.so",
+      "sha256": "9ff9650b5d0ea3b783f6d54a06486e736b038f717ec54bf60e6674215180bd48",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/liburee_meta_drmkeyinstall.so",
+      "sha256": "eff14ed692885f1ed6e04f8720d6942695b013af481030dce39ab1580cf0f885",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so",
+      "sha256": "e47e2044ec9df0dd51e276ca1b816f6c8c6ce482b1eb260e1fbe0ddeca98381d",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/hw/gatekeeper.default.so",
+      "sha256": "d4f811356ca2f8e0660b9dd772481d4983db4a5a05f4aee0f40538c7432b23ac",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/lib64/hw/gatekeeper.mt6889.so",
+      "sha256": "a76bc1eff3b97d485ea7ecc6edc975793c2c6260036d809935bb445ec8241de5",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/tp/20601/FW_S3908_BOE.img",
+      "sha256": "f8dc149d0b17e6f78405e2f8e619d36784534e9ae419d3eba5a761c6b33f903b",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/tp/20601/FW_S3908_BOE_FAE.img",
+      "sha256": "24daaa4e16361aac44eded6c6e50c1228e596018f9702cb2f8181548afd0ef56",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/tp/20601/FW_S3908_SAMSUNG.img",
+      "sha256": "2d0b327fdd2131e8eac612df606e8b88f2a2c688141c052f246c56867d911880",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/tp/20601/FW_S3908_SAMSUNG_FAE.img",
+      "sha256": "c0612151d24a05e328b0a6a179afbd569c8e9ca76af534c7e9a035cf7f5aa737",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/tp/20601/FW_S6SY771_SAMSUNG.bin",
+      "sha256": "57dfd4b11af4559487354dda3f2b1dba6cc8d465016d450e0147ab2dcf11f612",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/tp/20601/FW_S6SY771_SAMSUNG_FAE.bin",
+      "sha256": "7dbcda3db3ffe92bbfd2c16a6060a9da06aeeac4a0b7926f4974da5bfeeb6f1c",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/tp/20601/LIMIT_S3908_BOE.img",
+      "sha256": "ca6d8cb54be665234c482bad92350e5a05110c6edc0282e225604a7f1370facd",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/tp/20601/LIMIT_S3908_SAMSUNG.img",
+      "sha256": "4a2150e0abb04883cec903743a2ead99b7743f1b5fee0de58ea52fef8f14f378",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/tp/20601/LIMIT_S6SY771_SAMSUNG.img",
+      "sha256": "29fb2eeaba20034eae2d24776e6bea181da6846a2eb382f643b3c931fbb58b06",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/firmware/fastchg/20601/oppo_vooc_fw_rk826.bin",
+      "sha256": "8437fc7a695649558e4f6b3c4a1414209b54d0ca040a6e778a4084723e03e614",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/bin/hw/android.hardware.gatekeeper@1.0-service",
+      "sha256": "72d746ed823737d6f76789c15dad514a9d295f1292d22812dbb3cc781463afb9",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/bin/hw/android.hardware.keymaster@4.1-service.trustonic",
+      "sha256": "e7fe56fb4cce73a714d0afb8806b25359f9d64c40b346daff3d9747fb7c22011",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/00040000000000000000000000009381.tabin",
+      "sha256": "1d4d79c3d93018fed81868f86fa1fac923827af30166d2987242cc5025c7523b",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/020b0000000000000000000000000000.drbin",
+      "sha256": "8ed2aba1e40ed1be5840fca4469dc208abf68c7bae7609187db90c1eb90ed65d",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/020b0000000000000000000000000000.tlbin",
+      "sha256": "8ed2aba1e40ed1be5840fca4469dc208abf68c7bae7609187db90c1eb90ed65d",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/020f0000000000000000000000000000.drbin",
+      "sha256": "5e07c015ef58931a1740e5e8f97b73f91582c858297ca594268f2fa8283fcf06",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin",
+      "sha256": "5e07c015ef58931a1740e5e8f97b73f91582c858297ca594268f2fa8283fcf06",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/05120000000000000000000000000000.drbin",
+      "sha256": "e0c92be7cd9bc6b2efa67f23ca260ec7dabbc7d90f0c21803dd9d63068e14bea",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/05120000000000000000000000000000.tlbin",
+      "sha256": "e0c92be7cd9bc6b2efa67f23ca260ec7dabbc7d90f0c21803dd9d63068e14bea",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/06090000000000000000000000000000.drbin",
+      "sha256": "6e49d912b062a743ce9aa1ce377463ad4c02cc970d7b153b5c7c8d4b25800273",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/06090000000000000000000000000000.tlbin",
+      "sha256": "6e49d912b062a743ce9aa1ce377463ad4c02cc970d7b153b5c7c8d4b25800273",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/0706000000000000000000000000004d.tlbin",
+      "sha256": "6d9cbfcefe47c3ae3bc95f972ad453846eda49fded884f871e60330e0d3b2ba5",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/07060000000000000000000000007169.drbin",
+      "sha256": "c3dd1742fa0f793c2494773d07101ec45723246346be17c0207b6d7522d3e6ae",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/07060000000000000000000000007169.tlbin",
+      "sha256": "c3dd1742fa0f793c2494773d07101ec45723246346be17c0207b6d7522d3e6ae",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/07061000000000000000000000000000.tlbin",
+      "sha256": "5dc30f2827732f7e13f65bfc551e75b504d9d451d0e3402f0509b2c242652f8d",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/07070000000000000000000000000000.drbin",
+      "sha256": "397793b03b1540fad51742b638e0027d20ab18bae036acd6b4994a67e02ef315",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/07070000000000000000000000000000.tlbin",
+      "sha256": "397793b03b1540fad51742b638e0027d20ab18bae036acd6b4994a67e02ef315",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/07150000000000000000000000000000.drbin",
+      "sha256": "9e5351bd121d9c5a6437e0d4e7985e841ca10c763584ad1ef549712c2dfc3356",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/07150000000000000000000000000000.tlbin",
+      "sha256": "9e5351bd121d9c5a6437e0d4e7985e841ca10c763584ad1ef549712c2dfc3356",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/07170000000000000000000000000000.drbin",
+      "sha256": "b5dac6fdaea9bb78320b53031324db960fe71aeba609c16b0d69d8590ef35cff",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/07170000000000000000000000000000.tlbin",
+      "sha256": "b5dac6fdaea9bb78320b53031324db960fe71aeba609c16b0d69d8590ef35cff",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/08020000000000000000000000007169.tabin",
+      "sha256": "3f925b1ebb14ff0f25810069c9183121004821f7879aebc4b32e646f0f4f80b9",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/08030000000000000000000000000000.tabin",
+      "sha256": "b1e15c793e2eb46f9019011aeee5a88f0e831a6f6be25040d771e8bf3b04f2eb",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/08040000000000000000000000003419.tabin",
+      "sha256": "cd64323d6a7674834526dda83144c07d7de35eca928765859150d0b2b5630d07",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/08050000000000000000000000003419.drbin",
+      "sha256": "4d27f0536dede7990874c7581a5ca42ddb022858c3da64720bcb0376c67dbfba",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/08050000000000000000000000003419.tlbin",
+      "sha256": "4d27f0536dede7990874c7581a5ca42ddb022858c3da64720bcb0376c67dbfba",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/08070000000000000000000000008270.drbin",
+      "sha256": "dc0bd5ead67e54f172b3eab590aedaf5e191a9417f7f2f7255a076a918ba4508",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/08070000000000000000000000008270.tlbin",
+      "sha256": "dc0bd5ead67e54f172b3eab590aedaf5e191a9417f7f2f7255a076a918ba4508",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/08090000000000000000000000000000.tabin",
+      "sha256": "efd1bd7c9edb7867232ff789364e9cd13c0c84a6be0e326ea12e963506dce39c",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/08110000000000000000000000000000.tabin",
+      "sha256": "df53f1c21fed0e01a0bb60fbb32418def31228266a79759d51879c3afbcf739e",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/09010000000000000000000000000000.tabin",
+      "sha256": "49e37b9930cb5ab6ab3a9cd71087d1221581643f742d5b8987282d193629ab60",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/09030000000000000000000000008270.tabin",
+      "sha256": "64775c4e032e5f358cf4ad7cd6c972148511a71c3f098835ea9e6dbeb5e63065",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/09080000000000000000000000009381.drbin",
+      "sha256": "9333976d1d30128a085b51cd391319d8ead476ac94150c654583dd2e5848eb52",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/09080000000000000000000000009381.tlbin",
+      "sha256": "9333976d1d30128a085b51cd391319d8ead476ac94150c654583dd2e5848eb52",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.drbin",
+      "sha256": "4dc435c9d63c7f7ad43193ad9a8d4462bfa18faf0d1b847e6fcf6fde45bdf767",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.tlbin",
+      "sha256": "4dc435c9d63c7f7ad43193ad9a8d4462bfa18faf0d1b847e6fcf6fde45bdf767",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/4be4f7dc1f2c11e5b5f7727283247c7f.drbin",
+      "sha256": "e82754b09e524f35d97a17c48207ba9c5d69dcc94e998c7e04f96b65d87b5712",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/4be4f7dc1f2c11e5b5f7727283247c7f.tlbin",
+      "sha256": "e82754b09e524f35d97a17c48207ba9c5d69dcc94e998c7e04f96b65d87b5712",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/4be4fd221f2c11e5b5f7727283247c7f.tabin",
+      "sha256": "9b0cd3db99a20b657f5c735cecf5dd8b0760a5c2f1a0b7e91e101ed375809e5e",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/5020170115e016302017012521300000.drbin",
+      "sha256": "452fc0967ff66b9beffd9cf08378c0f3bedf407c883196f0bc934afa32116015",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/5020170115e016302017012521300000.tlbin",
+      "sha256": "452fc0967ff66b9beffd9cf08378c0f3bedf407c883196f0bc934afa32116015",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.drbin",
+      "sha256": "c76f687b0099ac7116846653fff7b2bab29b305dc8d49dfb8d56f8a0d3c5523f",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.tlbin",
+      "sha256": "c76f687b0099ac7116846653fff7b2bab29b305dc8d49dfb8d56f8a0d3c5523f",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/98fb95bcb4bf42d26473eae48690d7ea.tabin",
+      "sha256": "959162a44a318e2ad00b268321da7f0f362692286a7e60f9bdd45dbd9ec7348e",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/abcd270ea5c44c58bcd3384a2fa2539e.tabin",
+      "sha256": "e45305f98bfd79e89643109871ce3a0181ee1a299da4ab51ce35161174e81b75",
+      "matches_backup": true
+    },
+    {
+      "path": "vendor/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin",
+      "sha256": "98b481c7d12febf1d82e35ea4a45a7e0cd78957e89a463696c66e7867a7580b2",
+      "matches_backup": true
+    },
+    {
+      "path": "system/lib64/android.hardware.gatekeeper@1.0.so",
+      "sha256": "68aac3e1edf2be35ec0ff83e3b7045e5adc040b8a3692ba8fe90b2806f26c9af",
+      "matches_backup": true
+    },
+    {
+      "path": "system/lib64/libgatekeeper.so",
+      "sha256": "f24ecf5a0541a2e45ebccc1a0769e69a4aaf3b749a315b47e09785617f5abe51",
+      "matches_backup": true
+    },
+    {
+      "path": "system/lib64/libgatekeeper_aidl.so",
+      "sha256": "f864662a32f7c04dda27be66e850290c44e1247254bf701d08490023604cea7a",
+      "matches_backup": true
+    },
+    {
+      "path": "system/lib64/libhwbinder.so",
+      "sha256": "e882424cad30525212054193dcb4bf0f71989c8776ec574f947440ee5c984b4e",
+      "matches_backup": true
+    },
+    {
+      "path": "system/lib64/libion.so",
+      "sha256": "290cbd9f8eb502120e4662f95448ede4eb494f944e449acc3bf9531d65cb8e71",
+      "matches_backup": true
+    },
+    {
+      "path": "system/lib64/libnetutils.so",
+      "sha256": "da4611a87bb9e40adc72e53fdb422870802e40b203c90cf4fc39f75d72add9bd",
+      "matches_backup": true
+    },
+    {
+      "path": "system/lib64/hw/android.hardware.fastboot@1.0-impl-mtk.so",
+      "sha256": "e7ca6e7671240a7fdd6aa3f2608c508400869dd481692a8f5b0441f19a142ab5",
+      "matches_backup": false
+    },
+    {
+      "path": "odm/vendor/app/mcRegistry/030c0000000000000000000000000000.drbin",
+      "sha256": "826bbe9aaf3f300c9906754095e40623ab49f30f685dd078b421ea773cdeb8a4",
+      "matches_backup": true
+    },
+    {
+      "path": "odm/vendor/app/mcRegistry/030c0000000000000000000000000000.tlbin",
+      "sha256": "826bbe9aaf3f300c9906754095e40623ab49f30f685dd078b421ea773cdeb8a4",
+      "matches_backup": true
+    },
+    {
+      "path": "odm/vendor/app/mcRegistry/04320000000000000000000000000000.tlbin",
+      "sha256": "5d0d69442765ec386332c19279a0542035f00ff97fb193d7adeb3eb1f9093e53",
+      "matches_backup": true
+    },
+    {
+      "path": "odm/vendor/app/mcRegistry/05060000000000000000000000000000.tabin",
+      "sha256": "541c80490cf9a64ddc8b5ba7bca11da1d8062eafb3b3099a85f171981c203221",
+      "matches_backup": true
+    },
+    {
+      "path": "odm/vendor/app/mcRegistry/05070000000000000000000000000000.drbin",
+      "sha256": "6d01987a56c051f4cd780d0a9b00c24e0315ba395bd2315e564832d19f8d920a",
+      "matches_backup": true
+    },
+    {
+      "path": "odm/vendor/app/mcRegistry/070f0000000000000000000000000a0a.tlbin",
+      "sha256": "6197f611f515db9f6b99f184ed7941ec891f0f4db1be1070b85d104e26380e50",
+      "matches_backup": true
+    },
+    {
+      "path": "odm/vendor/app/mcRegistry/08010203000000000000000000000000.tabin",
+      "sha256": "713c688779829bd0bc440edd76e896bb7300cc3d6b8851fceda62f56cf702201",
+      "matches_backup": true
+    },
+    {
+      "path": "odm/vendor/app/mcRegistry/09060000000000000000000000000000.tabin",
+      "sha256": "d52190febe136789d3e40a220e701a758ce216bc79b399109c14e6ea568e8eb9",
+      "matches_backup": true
+    },
+    {
+      "path": "odm/vendor/app/mcRegistry/09070000000000000000000000000000.drbin",
+      "sha256": "60c1a089ff8172ab83ceff1ac60bc1ba2b36fe92e2e6771cf2267d8f61c6c9b6",
+      "matches_backup": true
+    },
+    {
+      "path": "odm/vendor/app/mcRegistry/09080000000000000000000000000000.tlbin",
+      "sha256": "9ee9010eef51841a62f0f3fca8825574e5c312e94422d41bad896414851d49e9",
+      "matches_backup": true
+    }
+  ],
+  "runtime_observation": {
+    "rom_release": "17",
+    "rom_sdk": 37,
+    "vendor_release": "12",
+    "vendor_sdk": 31,
+    "hardware": "mt6889",
+    "slot_suffix": "",
+    "dynamic_partitions": true,
+    "crypto_type": "file",
+    "data_fstab": "f2fs / FBE v1 aes-256-xts:aes-256-cts",
+    "metadata_block": "md_udc",
+    "screen": "1080x2400"
+  },
+  "compiled": false,
+  "boot_tested": false,
+  "decryption_tested": false,
+  "phone_writes": false,
+  "pending": [
+    "x86_64 Linux build host",
+    "compile against OrangeFox 12.1",
+    "verify output headers and installer target",
+    "fresh backup of installed recovery before test",
+    "runtime touch/ADB/MTP/OTG/fastbootd/FBE testing"
+  ]
+}

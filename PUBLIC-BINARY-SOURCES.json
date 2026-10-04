@@ -1,0 +1,590 @@
+{
+  "public_repository": "https://github.com/zeng-github01/android_device_realme_RMX2121",
+  "public_commit": "f18bb09091104cdfc92417c111037110de924327",
+  "binary_count": 97,
+  "all_match_public_upstream": true,
+  "files": [
+    {
+      "path": "prebuilt/kernel",
+      "git_blob": "84de5fc1a2322a797f17e6df3a1cd0b61efe7ab3",
+      "public_git_blob": "84de5fc1a2322a797f17e6df3a1cd0b61efe7ab3",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "prebuilt/dtbo",
+      "git_blob": "52f5a11ef8e159f04ed85082698172e0be27c51e",
+      "public_git_blob": "52f5a11ef8e159f04ed85082698172e0be27c51e",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "prebuilt/dtb/mt6889.dtb",
+      "git_blob": "6b10a00ebf57aaad60c2b3cbe06f3ee7e1c857ac",
+      "public_git_blob": "6b10a00ebf57aaad60c2b3cbe06f3ee7e1c857ac",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/bin/mcDriverDaemon",
+      "git_blob": "b5aace77369f92dd3eb854f834092b8bf8caed0b",
+      "public_git_blob": "b5aace77369f92dd3eb854f834092b8bf8caed0b",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/aw8697_haptic_170.bin",
+      "git_blob": "03613d5a360d802fb38d25d4742eaac1846a35c4",
+      "public_git_blob": "03613d5a360d802fb38d25d4742eaac1846a35c4",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/aw8697_haptic_235.bin",
+      "git_blob": "a0b34aedddf331bab91c102c1253161e81b21f56",
+      "public_git_blob": "a0b34aedddf331bab91c102c1253161e81b21f56",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/aw8697_rtp.bin",
+      "git_blob": "499a2f57ac47ad302cb4860b3bdcdff441ab4792",
+      "public_git_blob": "499a2f57ac47ad302cb4860b3bdcdff441ab4792",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libion_mtk.so",
+      "git_blob": "da133df5c4169d56013efa7f199a6e0b92e755cf",
+      "public_git_blob": "da133df5c4169d56013efa7f199a6e0b92e755cf",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libion_ulit.so",
+      "git_blob": "5bcd0709a622b35eb1eeb6c411850e8b6b4fca94",
+      "public_git_blob": "5bcd0709a622b35eb1eeb6c411850e8b6b4fca94",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libkeymaster4.so",
+      "git_blob": "b45ec95198084ead0850bb80bad5f853b4b38ef1",
+      "public_git_blob": "b45ec95198084ead0850bb80bad5f853b4b38ef1",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libkeymaster41.so",
+      "git_blob": "de8b5f4f17cb50f8ddd8dafdf29d9305966537d2",
+      "public_git_blob": "de8b5f4f17cb50f8ddd8dafdf29d9305966537d2",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libkeymaster4support.so",
+      "git_blob": "71ed03fc86b0f9faa61d304ae01ecc5a752edea4",
+      "public_git_blob": "71ed03fc86b0f9faa61d304ae01ecc5a752edea4",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libkeymaster4_1support.so",
+      "git_blob": "8ac7ee61bb8fe0839c9040db247a9ce97423dc45",
+      "public_git_blob": "8ac7ee61bb8fe0839c9040db247a9ce97423dc45",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libkeymaster_messages.so",
+      "git_blob": "fd85ecb1d8d50b99cdcb4e11e20c7df02ae100d0",
+      "public_git_blob": "fd85ecb1d8d50b99cdcb4e11e20c7df02ae100d0",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libkeymaster_portable.so",
+      "git_blob": "be2982a3bb69ed6459b3a430fd13bb6320f4af08",
+      "public_git_blob": "be2982a3bb69ed6459b3a430fd13bb6320f4af08",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libladder.so",
+      "git_blob": "dbd014a20e711bab9b91b62053b8a3ff00dfe748",
+      "public_git_blob": "dbd014a20e711bab9b91b62053b8a3ff00dfe748",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libMcClient.so",
+      "git_blob": "1c7c2ac8c37c9311a1abdf1fab2ffd267d571348",
+      "public_git_blob": "1c7c2ac8c37c9311a1abdf1fab2ffd267d571348",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libpuresoftkeymasterdevice.so",
+      "git_blob": "3c03b4fa1965a28fc387d835d7a2c00f6919231f",
+      "public_git_blob": "3c03b4fa1965a28fc387d835d7a2c00f6919231f",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libTEECommon.so",
+      "git_blob": "2b2c3a5a3b0e4fab475dfa9351141b289a30c8f0",
+      "public_git_blob": "2b2c3a5a3b0e4fab475dfa9351141b289a30c8f0",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/libtrustonic_keybox_ca.so",
+      "git_blob": "f14cb60ce860b42e1308499464dc48eb761b3c48",
+      "public_git_blob": "f14cb60ce860b42e1308499464dc48eb761b3c48",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/liburee_meta_drmkeyinstall.so",
+      "git_blob": "d4c69306f30379d9e1cdc9a8d8806245d76b0ef9",
+      "public_git_blob": "d4c69306f30379d9e1cdc9a8d8806245d76b0ef9",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so",
+      "git_blob": "afca6a8048aa5e54509b247c5a6ecc5071766817",
+      "public_git_blob": "afca6a8048aa5e54509b247c5a6ecc5071766817",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/hw/gatekeeper.default.so",
+      "git_blob": "65d760afa6397fe8a914acb0485e33962b5798dc",
+      "public_git_blob": "65d760afa6397fe8a914acb0485e33962b5798dc",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/lib64/hw/gatekeeper.mt6889.so",
+      "git_blob": "99e762169afe6a81077746d7512317a205c2f433",
+      "public_git_blob": "99e762169afe6a81077746d7512317a205c2f433",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/tp/20601/FW_S3908_BOE.img",
+      "git_blob": "7f0f35d0912afd1910c7f93e1894540d4c1e03db",
+      "public_git_blob": "7f0f35d0912afd1910c7f93e1894540d4c1e03db",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/tp/20601/FW_S3908_BOE_FAE.img",
+      "git_blob": "ea8ff60f9b5fb3ec3d756a3d7bc42dbdea551ac0",
+      "public_git_blob": "ea8ff60f9b5fb3ec3d756a3d7bc42dbdea551ac0",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/tp/20601/FW_S3908_SAMSUNG.img",
+      "git_blob": "84c1143620007c316276194884687c6a2870dc73",
+      "public_git_blob": "84c1143620007c316276194884687c6a2870dc73",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/tp/20601/FW_S3908_SAMSUNG_FAE.img",
+      "git_blob": "2958f0e1495c3c6fcdf007bdc1d378a4dce03cd3",
+      "public_git_blob": "2958f0e1495c3c6fcdf007bdc1d378a4dce03cd3",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/tp/20601/FW_S6SY771_SAMSUNG.bin",
+      "git_blob": "1a002f7e6aedf974d7ef8c3932c0cc4b0f621fe5",
+      "public_git_blob": "1a002f7e6aedf974d7ef8c3932c0cc4b0f621fe5",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/tp/20601/FW_S6SY771_SAMSUNG_FAE.bin",
+      "git_blob": "05b4fb3842a804f5a5cc939c3d83366079ea5444",
+      "public_git_blob": "05b4fb3842a804f5a5cc939c3d83366079ea5444",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/tp/20601/LIMIT_S3908_BOE.img",
+      "git_blob": "461584507d4fbc8395d4ec4220f21637a10d751d",
+      "public_git_blob": "461584507d4fbc8395d4ec4220f21637a10d751d",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/tp/20601/LIMIT_S3908_SAMSUNG.img",
+      "git_blob": "dce673fc3f9288e278b0d26f96c83eaab92b5c8f",
+      "public_git_blob": "dce673fc3f9288e278b0d26f96c83eaab92b5c8f",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/tp/20601/LIMIT_S6SY771_SAMSUNG.img",
+      "git_blob": "1674311965f866086f7515984228a5bb6a0dbc46",
+      "public_git_blob": "1674311965f866086f7515984228a5bb6a0dbc46",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/firmware/fastchg/20601/oppo_vooc_fw_rk826.bin",
+      "git_blob": "4ec99e891fa893e39903a6677e8fd220a198a461",
+      "public_git_blob": "4ec99e891fa893e39903a6677e8fd220a198a461",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/bin/hw/android.hardware.gatekeeper@1.0-service",
+      "git_blob": "4733eef46eada0f164ebb84f2a3103b6ffbf2d11",
+      "public_git_blob": "4733eef46eada0f164ebb84f2a3103b6ffbf2d11",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/bin/hw/android.hardware.keymaster@4.1-service.trustonic",
+      "git_blob": "299d83fe5b506dab351f205738064ac308699a4b",
+      "public_git_blob": "299d83fe5b506dab351f205738064ac308699a4b",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/00040000000000000000000000009381.tabin",
+      "git_blob": "8671ab97855342f7ba7f745e95a369fe88efbb95",
+      "public_git_blob": "8671ab97855342f7ba7f745e95a369fe88efbb95",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/020b0000000000000000000000000000.drbin",
+      "git_blob": "a0b2c1cd475fd1f5f5ab36948f42d1643266d9b1",
+      "public_git_blob": "a0b2c1cd475fd1f5f5ab36948f42d1643266d9b1",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/020b0000000000000000000000000000.tlbin",
+      "git_blob": "a0b2c1cd475fd1f5f5ab36948f42d1643266d9b1",
+      "public_git_blob": "a0b2c1cd475fd1f5f5ab36948f42d1643266d9b1",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/020f0000000000000000000000000000.drbin",
+      "git_blob": "66b9b5e0afe007b27f2d70479fb092a04d1cede1",
+      "public_git_blob": "66b9b5e0afe007b27f2d70479fb092a04d1cede1",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin",
+      "git_blob": "66b9b5e0afe007b27f2d70479fb092a04d1cede1",
+      "public_git_blob": "66b9b5e0afe007b27f2d70479fb092a04d1cede1",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/05120000000000000000000000000000.drbin",
+      "git_blob": "5defd40593a3edd02df687e92734ccc7938b5497",
+      "public_git_blob": "5defd40593a3edd02df687e92734ccc7938b5497",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/05120000000000000000000000000000.tlbin",
+      "git_blob": "5defd40593a3edd02df687e92734ccc7938b5497",
+      "public_git_blob": "5defd40593a3edd02df687e92734ccc7938b5497",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/06090000000000000000000000000000.drbin",
+      "git_blob": "5ed4d7d2cef53010e35a87f78ce467173224314d",
+      "public_git_blob": "5ed4d7d2cef53010e35a87f78ce467173224314d",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/06090000000000000000000000000000.tlbin",
+      "git_blob": "5ed4d7d2cef53010e35a87f78ce467173224314d",
+      "public_git_blob": "5ed4d7d2cef53010e35a87f78ce467173224314d",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/0706000000000000000000000000004d.tlbin",
+      "git_blob": "0bc2a975b155b68e73121bda2df8e3265ec0213c",
+      "public_git_blob": "0bc2a975b155b68e73121bda2df8e3265ec0213c",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/07060000000000000000000000007169.drbin",
+      "git_blob": "52817e36a356931b421bfdbe9dcac826980c5e2e",
+      "public_git_blob": "52817e36a356931b421bfdbe9dcac826980c5e2e",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/07060000000000000000000000007169.tlbin",
+      "git_blob": "52817e36a356931b421bfdbe9dcac826980c5e2e",
+      "public_git_blob": "52817e36a356931b421bfdbe9dcac826980c5e2e",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/07061000000000000000000000000000.tlbin",
+      "git_blob": "5434959101ae1a75e987f92908b432ff9ddba69d",
+      "public_git_blob": "5434959101ae1a75e987f92908b432ff9ddba69d",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/07070000000000000000000000000000.drbin",
+      "git_blob": "5a5d5101086298e5a054715e6324053576e145d6",
+      "public_git_blob": "5a5d5101086298e5a054715e6324053576e145d6",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/07070000000000000000000000000000.tlbin",
+      "git_blob": "5a5d5101086298e5a054715e6324053576e145d6",
+      "public_git_blob": "5a5d5101086298e5a054715e6324053576e145d6",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/07150000000000000000000000000000.drbin",
+      "git_blob": "e6174296a258678c653ea37d029f7bd0e7af0235",
+      "public_git_blob": "e6174296a258678c653ea37d029f7bd0e7af0235",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/07150000000000000000000000000000.tlbin",
+      "git_blob": "e6174296a258678c653ea37d029f7bd0e7af0235",
+      "public_git_blob": "e6174296a258678c653ea37d029f7bd0e7af0235",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/07170000000000000000000000000000.drbin",
+      "git_blob": "54fdbe9f8810834513f50f5835749f78e3df7588",
+      "public_git_blob": "54fdbe9f8810834513f50f5835749f78e3df7588",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/07170000000000000000000000000000.tlbin",
+      "git_blob": "54fdbe9f8810834513f50f5835749f78e3df7588",
+      "public_git_blob": "54fdbe9f8810834513f50f5835749f78e3df7588",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/08020000000000000000000000007169.tabin",
+      "git_blob": "ed627f55a0ebe8b841f160e15145540c38db299f",
+      "public_git_blob": "ed627f55a0ebe8b841f160e15145540c38db299f",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/08030000000000000000000000000000.tabin",
+      "git_blob": "f8d770b0a64ca183bce37c6cf22659a2773eff38",
+      "public_git_blob": "f8d770b0a64ca183bce37c6cf22659a2773eff38",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/08040000000000000000000000003419.tabin",
+      "git_blob": "11da20eeac5b64cb3d8ee63af681c9471d8684aa",
+      "public_git_blob": "11da20eeac5b64cb3d8ee63af681c9471d8684aa",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/08050000000000000000000000003419.drbin",
+      "git_blob": "01d2cf0833f7d2d1a18c4a529582b481a6e895f0",
+      "public_git_blob": "01d2cf0833f7d2d1a18c4a529582b481a6e895f0",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/08050000000000000000000000003419.tlbin",
+      "git_blob": "01d2cf0833f7d2d1a18c4a529582b481a6e895f0",
+      "public_git_blob": "01d2cf0833f7d2d1a18c4a529582b481a6e895f0",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/08070000000000000000000000008270.drbin",
+      "git_blob": "218eb28d21416e5de76533d3c45db6590830fe59",
+      "public_git_blob": "218eb28d21416e5de76533d3c45db6590830fe59",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/08070000000000000000000000008270.tlbin",
+      "git_blob": "218eb28d21416e5de76533d3c45db6590830fe59",
+      "public_git_blob": "218eb28d21416e5de76533d3c45db6590830fe59",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/08090000000000000000000000000000.tabin",
+      "git_blob": "209790311005dda78597fe187d291e36586771be",
+      "public_git_blob": "209790311005dda78597fe187d291e36586771be",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/08110000000000000000000000000000.tabin",
+      "git_blob": "a228e6c59f36c8026aae63f0b58fcc9ee39ee15b",
+      "public_git_blob": "a228e6c59f36c8026aae63f0b58fcc9ee39ee15b",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/09010000000000000000000000000000.tabin",
+      "git_blob": "e1b4608a6c82ec5c0e046c432d16aaa81bea2275",
+      "public_git_blob": "e1b4608a6c82ec5c0e046c432d16aaa81bea2275",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/09030000000000000000000000008270.tabin",
+      "git_blob": "1862dfc12b926eb6feb8185663d7760101889845",
+      "public_git_blob": "1862dfc12b926eb6feb8185663d7760101889845",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/09080000000000000000000000009381.drbin",
+      "git_blob": "4ac0bca60c68be484382c0968cb3482ccdd34d29",
+      "public_git_blob": "4ac0bca60c68be484382c0968cb3482ccdd34d29",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/09080000000000000000000000009381.tlbin",
+      "git_blob": "4ac0bca60c68be484382c0968cb3482ccdd34d29",
+      "public_git_blob": "4ac0bca60c68be484382c0968cb3482ccdd34d29",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.drbin",
+      "git_blob": "70131a4852bcdbfecceec58311ce632483bff5b1",
+      "public_git_blob": "70131a4852bcdbfecceec58311ce632483bff5b1",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.tlbin",
+      "git_blob": "70131a4852bcdbfecceec58311ce632483bff5b1",
+      "public_git_blob": "70131a4852bcdbfecceec58311ce632483bff5b1",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/4be4f7dc1f2c11e5b5f7727283247c7f.drbin",
+      "git_blob": "310295df6d0383258c08a1af50bfd317f764d51c",
+      "public_git_blob": "310295df6d0383258c08a1af50bfd317f764d51c",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/4be4f7dc1f2c11e5b5f7727283247c7f.tlbin",
+      "git_blob": "310295df6d0383258c08a1af50bfd317f764d51c",
+      "public_git_blob": "310295df6d0383258c08a1af50bfd317f764d51c",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/4be4fd221f2c11e5b5f7727283247c7f.tabin",
+      "git_blob": "0c1c84c53fbe9a6af56a6bcca7d5ff2170d9386e",
+      "public_git_blob": "0c1c84c53fbe9a6af56a6bcca7d5ff2170d9386e",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/5020170115e016302017012521300000.drbin",
+      "git_blob": "276a1c15d762bfe47e033fe70f4bd2bb10bb1c3f",
+      "public_git_blob": "276a1c15d762bfe47e033fe70f4bd2bb10bb1c3f",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/5020170115e016302017012521300000.tlbin",
+      "git_blob": "276a1c15d762bfe47e033fe70f4bd2bb10bb1c3f",
+      "public_git_blob": "276a1c15d762bfe47e033fe70f4bd2bb10bb1c3f",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.drbin",
+      "git_blob": "ccdb45456509ba32a689a425446724625a2d72b7",
+      "public_git_blob": "ccdb45456509ba32a689a425446724625a2d72b7",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/9073f03a9618383bb1856eb3f990babd.tlbin",
+      "git_blob": "ccdb45456509ba32a689a425446724625a2d72b7",
+      "public_git_blob": "ccdb45456509ba32a689a425446724625a2d72b7",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/98fb95bcb4bf42d26473eae48690d7ea.tabin",
+      "git_blob": "db72cccee7b23810a205d5a0af7c67b8826978cf",
+      "public_git_blob": "db72cccee7b23810a205d5a0af7c67b8826978cf",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/abcd270ea5c44c58bcd3384a2fa2539e.tabin",
+      "git_blob": "ca4fcca670c3acf8220daf8f54f1f731e163da3a",
+      "public_git_blob": "ca4fcca670c3acf8220daf8f54f1f731e163da3a",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/vendor/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin",
+      "git_blob": "0097664386ab338a7c2d7d1be00f0fb1e6a6fb11",
+      "public_git_blob": "0097664386ab338a7c2d7d1be00f0fb1e6a6fb11",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/system/lib64/android.hardware.gatekeeper@1.0.so",
+      "git_blob": "dff245c2dbde66480429c238261fcc6323ac9a84",
+      "public_git_blob": "dff245c2dbde66480429c238261fcc6323ac9a84",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/system/lib64/libgatekeeper.so",
+      "git_blob": "a4d531333caf0af59ec54f9aa1649cd38a7b0e4e",
+      "public_git_blob": "a4d531333caf0af59ec54f9aa1649cd38a7b0e4e",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/system/lib64/libgatekeeper_aidl.so",
+      "git_blob": "aa9e4d16a1484d02ac1b490f9277dcdf33b5374c",
+      "public_git_blob": "aa9e4d16a1484d02ac1b490f9277dcdf33b5374c",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/system/lib64/libhwbinder.so",
+      "git_blob": "9fc2fff4e26df38659c41100ce8fa2cd74260d87",
+      "public_git_blob": "9fc2fff4e26df38659c41100ce8fa2cd74260d87",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/system/lib64/libion.so",
+      "git_blob": "f3b29f70d28e4d7ee5234c5cbf93fba77392409c",
+      "public_git_blob": "f3b29f70d28e4d7ee5234c5cbf93fba77392409c",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/system/lib64/libnetutils.so",
+      "git_blob": "36bddf466d25390511c5161c018e8e4d0e502ae8",
+      "public_git_blob": "36bddf466d25390511c5161c018e8e4d0e502ae8",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/system/lib64/hw/android.hardware.fastboot@1.0-impl-mtk.so",
+      "git_blob": "540e5dfa3b33c7ba16a2c04e8a34e063463645f6",
+      "public_git_blob": "540e5dfa3b33c7ba16a2c04e8a34e063463645f6",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/odm/vendor/app/mcRegistry/030c0000000000000000000000000000.drbin",
+      "git_blob": "19ac300dd0ef791f41367729474ed34f8e1a324d",
+      "public_git_blob": "19ac300dd0ef791f41367729474ed34f8e1a324d",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/odm/vendor/app/mcRegistry/030c0000000000000000000000000000.tlbin",
+      "git_blob": "19ac300dd0ef791f41367729474ed34f8e1a324d",
+      "public_git_blob": "19ac300dd0ef791f41367729474ed34f8e1a324d",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/odm/vendor/app/mcRegistry/04320000000000000000000000000000.tlbin",
+      "git_blob": "d6e845258c9e238dba718f512ed9eb6593446513",
+      "public_git_blob": "d6e845258c9e238dba718f512ed9eb6593446513",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/odm/vendor/app/mcRegistry/05060000000000000000000000000000.tabin",
+      "git_blob": "9237c22c617bb06166c77629e57f755b07cbc60d",
+      "public_git_blob": "9237c22c617bb06166c77629e57f755b07cbc60d",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/odm/vendor/app/mcRegistry/05070000000000000000000000000000.drbin",
+      "git_blob": "11d93b52c5ba8a479cf9be7608cb22ba07bba083",
+      "public_git_blob": "11d93b52c5ba8a479cf9be7608cb22ba07bba083",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/odm/vendor/app/mcRegistry/070f0000000000000000000000000a0a.tlbin",
+      "git_blob": "28ac672ec1d12de216dbbe4c5e75e85ec9aa1ae2",
+      "public_git_blob": "28ac672ec1d12de216dbbe4c5e75e85ec9aa1ae2",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/odm/vendor/app/mcRegistry/08010203000000000000000000000000.tabin",
+      "git_blob": "74006ac1f29fd73a18ce8006063a87eb4a0183ec",
+      "public_git_blob": "74006ac1f29fd73a18ce8006063a87eb4a0183ec",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/odm/vendor/app/mcRegistry/09060000000000000000000000000000.tabin",
+      "git_blob": "9e254c8a7227501d9c2296258ead30d004623b85",
+      "public_git_blob": "9e254c8a7227501d9c2296258ead30d004623b85",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/odm/vendor/app/mcRegistry/09070000000000000000000000000000.drbin",
+      "git_blob": "90e01ca0932d623b88259d2c3d3b6aa105660bfb",
+      "public_git_blob": "90e01ca0932d623b88259d2c3d3b6aa105660bfb",
+      "matches_public_upstream": true
+    },
+    {
+      "path": "recovery/root/odm/vendor/app/mcRegistry/09080000000000000000000000000000.tlbin",
+      "git_blob": "878888b08d73055f3b73886757e8f048318b6225",
+      "public_git_blob": "878888b08d73055f3b73886757e8f048318b6225",
+      "matches_public_upstream": true
+    }
+  ]
+}

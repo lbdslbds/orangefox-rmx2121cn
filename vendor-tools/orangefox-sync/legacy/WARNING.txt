@@ -1,0 +1,18 @@
+****************
+WARNING NOTICE:
+****************
+All files in this "legacy" directory are considered totally *obsolete*.
+They are here for our own internal archiving purposes only, and they are 
+*absolutely unsupported* (ie, no exceptions will be made). 
+
+So, while you are at liberty look at the files, do NOT use any of them.
+
+No question or discussion will be entertained about any of the files in this directory.
+If you use any of them, you do so ENTIRELY at your own risk.
+
+Please do NOT come to any of our chats to ask ANY question about ANY of the
+files in this directory. And please do NOT report, or discuss, or mention, 
+anything concerning any of them.
+
+You have been warned!
+---------------
