@@ -27,7 +27,16 @@ export FOX_BUILD_DEVICE=RMX2121
 export LC_ALL=C
 export ALLOW_MISSING_DEPENDENCIES=false
 # AOSP envsetup is not compatible with nounset; intentionally leave it off.
+set +e
 source build/envsetup.sh
+envsetup_status=$?
+set -e
+# envsetup includes optional vendor scripts whose final tests can return 1.
+# Check the API we actually need; lunch and compilation still fail normally.
+declare -F lunch mka >/dev/null
+if (( envsetup_status != 0 )); then
+  echo "envsetup returned $envsetup_status; lunch/mka are defined, continuing to lunch."
+fi
 source "$destination/vendorsetup.sh"
 if [[ "${FOX_AB_DEVICE:-0}" != 0 || "${FOX_VIRTUAL_AB_DEVICE:-0}" != 0 || "${FOX_VENDOR_BOOT_RECOVERY:-0}" != 0 ]]; then
   echo "Unexpected A/B or vendor_boot recovery configuration" >&2

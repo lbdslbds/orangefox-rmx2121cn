@@ -50,7 +50,10 @@ system_ext、my_manifest、my_bigball 的 ext4/EROFS logical 挂载项。其余�
 
 来源、镜像哈希和比较结果在 `provenance.json`。官方 sync 脚本提交为
 `53a303ecfb622c516082d3e61dbaa7d9f02f0120`，原版文件保存在
-`vendor-tools/orangefox-sync/`。每次构建保存实际源码 manifest 和 recovery/vendor 提交，
+`vendor-tools/orangefox-sync/`。此副本修正了一处 vendor/twrp 补丁路径：
+`patch-vendor-twrp-fox_12.1.diff` 实际在 `patches/` 子目录。构建脚本在加载 AOSP
+envsetup 时允许可选初始化脚本返回非零，然后核查 lunch/mka 函数并严格检查编译结果。
+每次构建保存实际源码 manifest 和 recovery/vendor 提交，
 用于重现源码状态。官方源分支会继续变化，后续构建不保证与首次完全相同。
 
 已有的版权声明保留。OrangeFox 源码按其原始许可证使用；对外发布修改后的成品时，

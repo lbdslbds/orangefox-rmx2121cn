@@ -193,7 +193,7 @@ update_environment() {
   PATCH_VOLD="$BASE_DIR/patches/patch-vold-$FOX_DEF_BRANCH.diff";
   PATCH_REMOVE_MINIMAL="$BASE_DIR/patches/patch-remove-minimal-$FOX_DEF_BRANCH.diff";
   PATCH_UPDATE_ENGINE="$BASE_DIR/patches/patch-update-engine-$FOX_DEF_BRANCH.diff";
-  PATCH_VENDOR_TWRP="$BASE_DIR/patch-vendor-twrp-$FOX_DEF_BRANCH.diff";
+  PATCH_VENDOR_TWRP="$BASE_DIR/patches/patch-vendor-twrp-$FOX_DEF_BRANCH.diff";
 
   # the directory in which the patch of the manifest will be executed
   MANIFEST_BUILD_DIR="$MANIFEST_DIR/build";
