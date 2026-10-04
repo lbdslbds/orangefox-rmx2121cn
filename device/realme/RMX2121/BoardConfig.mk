@@ -18,8 +18,8 @@
 
 DEVICE_PATH := device/realme/RMX2121
 
-# Fail on unresolved dependencies during the first OrangeFox build.
-ALLOW_MISSING_DEPENDENCIES := false
+# Recovery's minimal manifest intentionally omits full Android system modules.
+ALLOW_MISSING_DEPENDENCIES := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -136,8 +136,6 @@ TW_USE_FSCRYPT_POLICY := 1
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
     libpuresoftkeymasterdevice \
-    ashmemd_aidl_interface-cpp \
-    libashmemd_client \
     android.system.keystore2 \
     android.hardware.keymaster@4.1
 
@@ -147,8 +145,6 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.keymaster@4.1.so
 
 # TWRP specific build flags

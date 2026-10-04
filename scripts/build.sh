@@ -25,7 +25,7 @@ python3 "$project_dir/scripts/verify-source.py" "$destination" "$project_dir/pro
 cd "$build_root"
 export FOX_BUILD_DEVICE=RMX2121
 export LC_ALL=C
-export ALLOW_MISSING_DEPENDENCIES=false
+export ALLOW_MISSING_DEPENDENCIES=true
 # AOSP envsetup is not compatible with nounset; intentionally leave it off.
 set +e
 source build/envsetup.sh

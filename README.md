@@ -46,7 +46,9 @@ init、USB、VINTF 文本配置存在上游版本差异；这些配置采用公�
 移除 TWRP 的 Y/H 偏移，设置 OrangeFox 2400 屏幕高度。为本地移植 ROM 增加
 system_ext、my_manifest、my_bigball 的 ext4/EROFS logical 挂载项。其余解密配置、
 上游安全补丁属性、原始 fstab/flags 保留，以便根据第一次实机日志调整。
-未知依赖不再被 `ALLOW_MISSING_DEPENDENCIES=true` 掩盖。
+沿用 recovery 最小源码清单需要的 `ALLOW_MISSING_DEPENDENCIES=true`；实际编译目标
+及镜像仍需通过构建和产物检查。移除了无源码、且预编译设备 blobs 未引用的
+`ashmemd_aidl_interface-cpp` 和 `libashmemd_client` 两项历史依赖。
 
 来源、镜像哈希和比较结果在 `provenance.json`。官方 sync 脚本提交为
 `53a303ecfb622c516082d3e61dbaa7d9f02f0120`，原版文件保存在

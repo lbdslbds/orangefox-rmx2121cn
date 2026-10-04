@@ -10,6 +10,6 @@ local TWRP backup. Upstream init/USB, crypto libraries, security-patch values
 and fstab flags are retained as a baseline; this does not prove runtime
 decryption of the local Android 17 / Android 12 vendor combination.
 
-Changes: OrangeFox exports, removal of TWRP-only screen offsets, strict
-dependency checking, and fstab entries for system_ext/my_manifest/my_bigball.
+Changes: OrangeFox exports, removal of TWRP-only screen offsets and unused
+ashmemd references, and fstab entries for system_ext/my_manifest/my_bigball.
 Original copyright and license notices are preserved.
