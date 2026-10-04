@@ -1,0 +1,42 @@
+{
+  "image": {
+    "bytes": 134217728,
+    "sha256": "caa2aa6471cc90f7a94a9e95c064af5a084085ccb973644759029379f1b75b29",
+    "header_version": 2,
+    "page_size": 2048,
+    "ramdisk_size": 36513367,
+    "boot_components": {
+      "kernel": "16aa83fe3fcff046ab57aa17300df75e959bc8df50fc2143704925eda84dac7e",
+      "dtbo": "6d99889b0f9774bf5aeb6e3a732b88cb0e567802f6b74cf7ef67a9c70a686649",
+      "dtb": "11c7a94d35c97a9c6c69c4462c87e3e5195520c46747f36137f2cfc8152695ae"
+    },
+    "orangefox_marker_present": true
+  },
+  "installers": [
+    {
+      "file": "OrangeFox-R12.0_FBEv1-CN-Unofficial-RMX2121.zip",
+      "sha256": "edf54208073f285325bcb9497822a55a28ce904b9f95d2a29800060b1b193e2c",
+      "embedded_image": {
+        "bytes": 134217728,
+        "sha256": "caa2aa6471cc90f7a94a9e95c064af5a084085ccb973644759029379f1b75b29",
+        "header_version": 2,
+        "page_size": 2048,
+        "ramdisk_size": 36513367,
+        "boot_components": {
+          "kernel": "16aa83fe3fcff046ab57aa17300df75e959bc8df50fc2143704925eda84dac7e",
+          "dtbo": "6d99889b0f9774bf5aeb6e3a732b88cb0e567802f6b74cf7ef67a9c70a686649",
+          "dtb": "11c7a94d35c97a9c6c69c4462c87e3e5195520c46747f36137f2cfc8152695ae"
+        },
+        "orangefox_marker_present": true
+      },
+      "installer_target_markers": {
+        "META-INF/com/google/android/updater-script": false,
+        "META-INF/com/google/android/update-binary": true
+      }
+    }
+  ],
+  "structural_checks_passed": true,
+  "boot_tested": false,
+  "decryption_tested": false,
+  "status": "Unverified test candidate"
+}

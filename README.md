@@ -1,6 +1,13 @@
 # OrangeFox 云编译工程：realme X7 Pro / RMX2121CN
 
-状态：**设备树和 Actions 工作流已准备；尚未完成编译、开机或解密验证。**
+状态：**首版 OrangeFox R12.0 已编译成功并通过离线检查；尚未实机验证启动或解密。**
+
+成功构建：[Actions 第 3 轮](https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37208417799)，
+编译提交 `8ca91eec79812cc0eeb48e11a2947919bed43d87`。
+安装包为 `OrangeFox-R12.0_FBEv1-CN-Unofficial-RMX2121.zip`。
+校验报告、具体源码 manifest 和 SHA256 保存在 `reports/build-3/`。
+本地复核确认 6 个关键程序存在及其直接 ELF 依赖库在 ramdisk 中，设备预编译
+blobs 与设备树一致；这不能替代服务启动、动态链接命名空间和解密的实机检查。
 
 适配目标是本机自制 ColorOS 移植 ROM：系统声明 Android 17 / API 37，vendor 为
 Android 12 / API 31，内核 4.14.186+。设备为 A-only，独立 recovery 分区 128 MiB，

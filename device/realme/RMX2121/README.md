@@ -1,6 +1,7 @@
 # OrangeFox candidate device tree for realme X7 Pro (RMX2121CN)
 
-Status: source preparation only. Not compiled, not boot-tested, not flashable yet.
+Status: compiled into an R12.0 candidate; offline checks passed.
+Not boot-tested or decryption-tested. See reports/build-3 at the repository root.
 Base: zeng-github01/android_device_realme_RMX2121, twrp-12.1_cn.
 Use the official OrangeFox 12.1 sync process and `twrp_RMX2121-eng`.
 See the package-level README for commands and validation status.

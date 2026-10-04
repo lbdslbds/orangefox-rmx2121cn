@@ -1,0 +1,10 @@
+{
+  "release": "OrangeFox R12.0 FBEv1-CN Unofficial",
+  "build_run": "https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37208417799",
+  "build_commit": "8ca91eec79812cc0eeb48e11a2947919bed43d87",
+  "compiled": true,
+  "offline_checks_passed": true,
+  "boot_tested": false,
+  "decryption_tested": false,
+  "phone_modified": false
+}

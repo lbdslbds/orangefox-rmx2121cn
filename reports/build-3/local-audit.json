@@ -1,0 +1,157 @@
+{
+  "download_sha256_passed": true,
+  "ramdisk_file_count": 3663,
+  "critical_executables": [
+    {
+      "path": "system/bin/recovery",
+      "needed": [
+        "libfs_mgr.so",
+        "libhardware.so",
+        "android.hardware.boot@1.0.so",
+        "android.hardware.boot@1.1.so",
+        "android.hardware.boot@1.2.so",
+        "libprotobuf-cpp-lite.so",
+        "liblp.so",
+        "libutils.so",
+        "libhidlbase.so",
+        "android.hardware.health@2.0.so",
+        "libz.so",
+        "libcutils.so",
+        "libstdc++.so",
+        "libtar.so",
+        "libblkid.so",
+        "libminuitwrp.so",
+        "libmtdutils.so",
+        "libtwadbbu.so",
+        "libbootloader_message.so",
+        "libcrecovery.so",
+        "libtwrpdigest.so",
+        "libc++.so",
+        "libaosprecovery.so",
+        "libcrypto.so",
+        "libbase.so",
+        "libziparchive.so",
+        "libselinux.so",
+        "libdl_android.so",
+        "libtwrpmtp-ffs.so",
+        "libgpt_twrp.so",
+        "android.frameworks.stats@1.0.so",
+        "android.hardware.authsecret@1.0.so",
+        "android.security.authorization-ndk_platform.so",
+        "android.hardware.oemlock@1.0.so",
+        "libf2fs_sparseblock.so",
+        "libbinder.so",
+        "libbinder_ndk.so",
+        "libandroidicu.so",
+        "android.hardware.gatekeeper@1.0.so",
+        "android.hardware.weaver@1.0.so",
+        "android.security.maintenance-ndk_platform.so",
+        "android.system.keystore2-V1-ndk_platform.so",
+        "libkeyutils.so",
+        "liblog.so",
+        "libsqlite.so",
+        "libkeystoreinfo.so",
+        "libgatekeeper_aidl.so",
+        "libresetprop.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "absent_from_ramdisk": []
+    },
+    {
+      "path": "system/bin/adbd",
+      "needed": [
+        "libadbd_fs.so",
+        "liblog.so",
+        "libselinux.so",
+        "libbase.so",
+        "libadb_protos.so",
+        "libadbd_auth.so",
+        "libcrypto.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "absent_from_ramdisk": []
+    },
+    {
+      "path": "system/bin/keystore2",
+      "needed": [
+        "libbinder_ndk.so",
+        "libcutils.so",
+        "liblog.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so",
+        "libkeystore2_aaid.so",
+        "libkeystore2_apc_compat.so",
+        "libkeystore2_crypto.so",
+        "libcrypto.so",
+        "libkm_compat_service.so",
+        "libselinux.so",
+        "libkeystore2_vintf_cpp.so",
+        "libsqlite.so"
+      ],
+      "absent_from_ramdisk": []
+    },
+    {
+      "path": "vendor/bin/mcDriverDaemon",
+      "needed": [
+        "liblog.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "absent_from_ramdisk": []
+    },
+    {
+      "path": "vendor/bin/hw/android.hardware.keymaster@4.1-service.trustonic",
+      "needed": [
+        "android.hardware.keymaster@4.0.so",
+        "android.hardware.keymaster@4.1.so",
+        "libbase.so",
+        "libcutils.so",
+        "libhardware.so",
+        "libhidlbase.so",
+        "libkeymaster4.so",
+        "libkeymaster41.so",
+        "liblog.so",
+        "libutils.so",
+        "libMcClient.so",
+        "libcrypto.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "absent_from_ramdisk": []
+    },
+    {
+      "path": "vendor/bin/hw/android.hardware.gatekeeper@1.0-service",
+      "needed": [
+        "android.hardware.gatekeeper@1.0.so",
+        "libhardware.so",
+        "libhidlbase.so",
+        "libutils.so",
+        "liblog.so",
+        "libc++.so",
+        "libc.so",
+        "libm.so",
+        "libdl.so"
+      ],
+      "absent_from_ramdisk": []
+    }
+  ],
+  "device_blobs_match_source": true,
+  "scope": "Direct ELF dependency presence only; namespace loading and service startup require runtime tests",
+  "boot_tested": false,
+  "decryption_tested": false,
+  "installer": {
+    "target": "RMX2121",
+    "recovery_partition": "$DEV_BLOCK_ROOT/recovery",
+    "virtual_ab": false
+  }
+}
