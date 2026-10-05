@@ -5,9 +5,52 @@ import json
 import pathlib
 import re
 import shutil
+import stat
 import struct
 import sys
 import zipfile
+
+
+def ramdisk_files(archive):
+    files = {}
+    pos = 0
+    while pos + 110 <= len(archive):
+        if archive[pos:pos + 6] not in (b"070701", b"070702"):
+            raise ValueError("Invalid newc entry")
+        fields = [int(archive[pos + 6 + i * 8:pos + 14 + i * 8], 16) for i in range(13)]
+        name = archive[pos + 110:pos + 110 + fields[11] - 1].decode()
+        pos = (pos + 110 + fields[11] + 3) & ~3
+        contents = archive[pos:pos + fields[6]]
+        pos = (pos + fields[6] + 3) & ~3
+        if name == "TRAILER!!!":
+            return files
+        if stat.S_ISREG(fields[1]):
+            files[name.removeprefix("./")] = contents
+    raise ValueError("Missing newc trailer")
+
+
+def inspect_runtime(data, expected_script):
+    ksize, rsize, page = (struct.unpack_from("<I", data, offset)[0] for offset in (8, 16, 36))
+    offset = page + (ksize + page - 1) // page * page
+    files = ramdisk_files(gzip.decompress(data[offset:offset + rsize]))
+    helper = "system/bin/rmx2121-keymaster-props.sh"
+    if files.get(helper) != expected_script:
+        raise ValueError("ROM property helper missing or differs from source")
+    if ("/system/bin/sh /" + helper).encode() not in files["system/bin/recovery"]:
+        raise ValueError("Pre-decryption runtime hook absent from compiled recovery")
+    generic = files["system/etc/init/hw/init.rc"].decode()
+    device_usb = files["init.recovery.usb.rc"].decode()
+    device_hal = files["init.recovery.mt6889.rc"].decode()
+    if "on property:sys.usb.config=fastboot\n    start fastbootd\n" in generic:
+        raise ValueError("Duplicate generic fastboot service action remains")
+    if "on property:sys.usb.config=fastboot && property:sys.usb.ffs.ready=1 && property:sys.usb.configfs=1" in generic:
+        raise ValueError("Duplicate generic fastboot USB binding remains")
+    if device_hal.count("    restart fastbootd\n") != 1:
+        raise ValueError("Missing single device fastboot service action")
+    if device_usb.count("property:sys.usb.config=fastboot && property:sys.usb.configfs=1") != 1:
+        raise ValueError("Missing single device fastboot USB binding")
+    return {"helper_sha256": hashlib.sha256(expected_script).hexdigest(),
+            "pre_decryption_hook_present": True, "single_fastboot_usb_action": True}
 
 
 def inspect_image(data, provenance):
@@ -54,6 +97,8 @@ def main():
             raise ValueError("Cannot determine the build's recovery image")
         image_path = images[0]
     image_report = inspect_image(image_path.read_bytes(), provenance)
+    helper = provenance_path.parent / "device/realme/RMX2121/recovery/root/system/bin/rmx2121-keymaster-props.sh"
+    runtime_report = inspect_runtime(image_path.read_bytes(), helper.read_bytes())
     archives = sorted(product.glob("OrangeFox*.zip"))
     if not archives:
         raise ValueError("Official OrangeFox installer ZIP was not generated")
@@ -90,7 +135,7 @@ def main():
     shutil.copy2(image_path, output / "OrangeFox-RMX2121CN-candidate.img")
     for path in archives:
         shutil.copy2(path, output / path.name)
-    report = {"image": image_report, "installers": zip_reports,
+    report = {"image": image_report, "runtime": runtime_report, "installers": zip_reports,
               "structural_checks_passed": True, "boot_tested": False,
               "decryption_tested": False, "status": "Unverified test candidate"}
     (output / "image-check.json").write_text(json.dumps(report, indent=2), encoding="utf-8")

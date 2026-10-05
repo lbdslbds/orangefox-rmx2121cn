@@ -1,13 +1,11 @@
 # OrangeFox 云编译工程：realme X7 Pro / RMX2121CN
 
-状态：**首版 OrangeFox R12.0 已编译成功并通过离线检查；尚未实机验证启动或解密。**
+状态：**新版 atomic DRM 已实机确认全屏与触摸正常，ADB 正常。解密和 MTP 在临时修复后通过；自动解密修复与 fastbootd USB 修复等待新构建验证。**
 
-成功构建：[Actions 第 3 轮](https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37208417799)，
-编译提交 `8ca91eec79812cc0eeb48e11a2947919bed43d87`。
+已测试构建：[Actions 第 4 轮](https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37269606683)，
+编译提交 `c8d524866625320b162a899ef387491e16884e4d`。
 安装包为 `OrangeFox-R12.0_FBEv1-CN-Unofficial-RMX2121.zip`。
-校验报告、具体源码 manifest 和 SHA256 保存在 `reports/build-3/`。
-本地复核确认 6 个关键程序存在及其直接 ELF 依赖库在 ramdisk 中，设备预编译
-blobs 与设备树一致；这不能替代服务启动、动态链接命名空间和解密的实机检查。
+详见 [第二轮实机测试](SECOND-DEVICE-TEST.md)。当前仍是测试候选，尚未完成全部验证。
 
 适配目标是本机自制 ColorOS 移植 ROM：系统声明 Android 17 / API 37，vendor 为
 Android 12 / API 31，内核 4.14.186+。设备为 A-only，独立 recovery 分区 128 MiB，
@@ -23,6 +21,7 @@ Android 12 / API 31，内核 4.14.186+。设备为 A-only，独立 recovery 分�
 5. 若失败，查看 `sync.log`、`build.log`，保留第一处错误的上下文。
 
 工作流手动触发，使用 `ubuntu-22.04` x64、4 并行任务、12 GiB swap，最长 350 分钟。
+使用官方 `actions/checkout` 和 `actions/upload-artifact` v7.0.1（Node 24），固定完整提交 SHA。
 它会清理 GitHub 临时虚拟机上的无关 SDK，并检查空间。源同步采用随工程打包的
 官方 OrangeFox sync 脚本，选择 12.1 分支，不会因为系统显示 API 37 就切换到更高
 编译分支。实际 OrangeFox 发布版本由官方源码决定。
@@ -54,13 +53,14 @@ init、USB、VINTF 文本配置存在上游版本差异；这些配置采用公�
 下一版保留新版 atomic DRM，通过 `scripts/patch-mtk-drm.py` 为 MediaTek 驱动选择
 支持当前屏幕 CRTC 的一个全宽主平面，由内核处理硬件 dual-pipe 分割，避免 SDE
 默认两个用户态平面的半屏异常。补丁严格检查输入源码哈希，并保存输出哈希，
-需要重新实机验证。`vendor-tools/recovery-legacy-drm/` 的旧版 TeamWin 实现只保留
+第 4 轮已实机确认完整显示与触摸。`vendor-tools/recovery-legacy-drm/` 的旧版 TeamWin 实现只保留
 作对照，当前构建不使用。安装 ZIP 接受 RMX2121 和 RMX2121CN，产物检查会核对完整断言。
 
 新增 `vendorsetup.sh`，导出 OrangeFox 所需配置，使用 vanilla 模式和 Keymaster 4.1。
 移除 TWRP 的 Y/H 偏移，设置 OrangeFox 2400 屏幕高度。为本地移植 ROM 增加
-system_ext、my_manifest、my_bigball 的 ext4/EROFS logical 挂载项。其余解密配置、
-上游安全补丁属性、原始 fstab/flags 保留，以便根据第一次实机日志调整。
+system_ext、my_manifest、my_bigball 的 ext4/EROFS logical 挂载项。原始 fstab/flags 保留。运行时在 userdata DE 初始化前只读读取系统版本和 SPL，
+配置内存属性并重启 Keymaster/keystore2；移除设备和通用 init 重复的 fastboot USB action。
+这些修复根据第二轮日志准备，自动解密和 fastbootd 仍需首次启动验证。
 沿用 recovery 最小源码清单需要的 `ALLOW_MISSING_DEPENDENCIES=true`；实际编译目标
 及镜像仍需通过构建和产物检查。移除了无源码、且预编译设备 blobs 未引用的
 `ashmemd_aidl_interface-cpp` 和 `libashmemd_client` 两项历史依赖。

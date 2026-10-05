@@ -25,6 +25,7 @@ python3 "$project_dir/scripts/verify-source.py" "$destination" "$project_dir/pro
 # Retain the current atomic backend. On MTK the kernel splits a full-width
 # primary plane into hardware pipes; userspace must not split it into SDE planes.
 python3 "$project_dir/scripts/patch-mtk-drm.py" "$build_root/bootable/recovery/minuitwrp/graphics_drm.cpp" > "$output_dir/graphics-source.json"
+python3 "$project_dir/scripts/patch-recovery-runtime.py" "$build_root/bootable/recovery" > "$output_dir/runtime-source.json"
 cd "$build_root"
 export FOX_BUILD_DEVICE=RMX2121
 export LC_ALL=C
