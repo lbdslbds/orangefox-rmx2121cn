@@ -49,8 +49,13 @@ def inspect_runtime(data, expected_script):
         raise ValueError("Missing single device fastboot service action")
     if device_usb.count("property:sys.usb.config=fastboot && property:sys.usb.configfs=1") != 1:
         raise ValueError("Missing single device fastboot USB binding")
+    fastboot_actions = [block for block in device_usb.split("\non ")
+                        if "property:sys.usb.config=fastboot" in block.splitlines()[0]]
+    if len(fastboot_actions) != 1 or "write /config/usb_gadget/g1/os_desc/use 0" not in fastboot_actions[0]:
+        raise ValueError("Fastboot USB must disable unsupported Microsoft OS descriptors")
     return {"helper_sha256": hashlib.sha256(expected_script).hexdigest(),
-            "pre_decryption_hook_present": True, "single_fastboot_usb_action": True}
+            "pre_decryption_hook_present": True, "single_fastboot_usb_action": True,
+            "fastboot_ms_os_descriptors_disabled": True}
 
 
 def inspect_image(data, provenance):

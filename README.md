@@ -1,11 +1,11 @@
 # OrangeFox 云编译工程：realme X7 Pro / RMX2121CN
 
-状态：**新版 atomic DRM 已实机确认全屏与触摸正常，ADB 正常。解密和 MTP 在临时修复后通过；自动解密修复与 fastbootd USB 修复等待新构建验证。**
+状态：**新版 atomic DRM、触摸、ADB、冷启动自动解密和 MTP 已实机通过。fastbootd 经临时 USB 描述符修复及 Windows 驱动安装后可连接并退出；描述符修复固化后仍需新构建验证。**
 
-已测试构建：[Actions 第 4 轮](https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37269606683)，
-编译提交 `c8d524866625320b162a899ef387491e16884e4d`。
+已测试构建：[Actions 第 5 轮](https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37275097258)，
+编译提交 `d1c835adc1b70566e7e9fcca25d3e52c254d5546`。
 安装包为 `OrangeFox-R12.0_FBEv1-CN-Unofficial-RMX2121.zip`。
-详见 [第二轮实机测试](SECOND-DEVICE-TEST.md)。当前仍是测试候选，尚未完成全部验证。
+详见 [第三轮实机测试](THIRD-DEVICE-TEST.md)。当前仍是测试候选，尚未完成全部验证。
 
 适配目标是本机自制 ColorOS 移植 ROM：系统声明 Android 17 / API 37，vendor 为
 Android 12 / API 31，内核 4.14.186+。设备为 A-only，独立 recovery 分区 128 MiB，
@@ -60,7 +60,8 @@ init、USB、VINTF 文本配置存在上游版本差异；这些配置采用公�
 移除 TWRP 的 Y/H 偏移，设置 OrangeFox 2400 屏幕高度。为本地移植 ROM 增加
 system_ext、my_manifest、my_bigball 的 ext4/EROFS logical 挂载项。原始 fstab/flags 保留。运行时在 userdata DE 初始化前只读读取系统版本和 SPL，
 配置内存属性并重启 Keymaster/keystore2；移除设备和通用 init 重复的 fastboot USB action。
-这些修复根据第二轮日志准备，自动解密和 fastbootd 仍需首次启动验证。
+第 5 轮已确认自动解密成功。fastboot 模式关闭不兼容的 Microsoft OS 描述符，
+ADB/MTP 模式恢复该选项；此补丁固化后的 fastbootd 进出仍需验证。
 沿用 recovery 最小源码清单需要的 `ALLOW_MISSING_DEPENDENCIES=true`；实际编译目标
 及镜像仍需通过构建和产物检查。移除了无源码、且预编译设备 blobs 未引用的
 `ashmemd_aidl_interface-cpp` 和 `libashmemd_client` 两项历史依赖。
