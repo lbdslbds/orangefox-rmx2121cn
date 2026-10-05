@@ -1,0 +1,11 @@
+{
+  "partitionmanager_upstream_sha256": "12105816ea9d1f4aa8dc3621b41737584de7c698f02bbaff70a0d1495a772aaa",
+  "partitionmanager_patched_sha256": "2b9027f036c7fbf3c55758f2ba31074daa0913f82fb8609e71f0718cdff23828",
+  "init_upstream_sha256": "d6eb97edb36a2af18b9243df3cce976745ad0a35c0e8edd1072fb29ca1eb07a8",
+  "init_patched_sha256": "4118d186a065dfccea60c8aa5a601ae982654f13a6c1fad1452a5cc0287bac91",
+  "changes": [
+    "ROM properties before DE initialization",
+    "single device fastboot USB action"
+  ],
+  "device_test_passed": false
+}

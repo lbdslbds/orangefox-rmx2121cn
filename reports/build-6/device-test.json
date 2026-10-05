@@ -1,0 +1,22 @@
+{
+  "build_run": "https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37282885690",
+  "build_commit": "cb23f7d0225a0262c8b34cf1f8665696bf0c27a9",
+  "image_sha256": "def8f111567534b2fdb9b4ca1f53226fc59622331f7b760aef32626e96fbb8f7",
+  "zip_sha256": "3f3f0ee1001a42e1a996341322e0095725647c44a1547635accbb51e0924bdf5",
+  "fully_validated_current_setup": true,
+  "results": {
+    "display_passed": true,
+    "touch_passed": true,
+    "adb_passed": true,
+    "cold_boot_decryption_passed": true,
+    "mtp_passed": true,
+    "fastbootd_passed": true,
+    "fastbootd_without_manual_usb_changes": true,
+    "fastbootd_exit_recovery_passed": true,
+    "post_fastbootd_mtp_passed": true,
+    "android_boot_completed": true
+  },
+  "scope": "This physical RMX2121CN and current custom ROM only; installed using recovery-only bootloader fastboot; ZIP installer itself not executed.",
+  "actions_annotations": [],
+  "recovery_image_retained": true
+}

@@ -1,0 +1,7 @@
+{
+  "backend": "OrangeFox atomic DRM with MTK full-width primary-plane patch",
+  "upstream_sha256": "41aba0485d2ac547bc136e756017dcddcd47b5741340d592120dd0d7b5baabd3",
+  "patched_sha256": "d441ee8d814da5dc74eb32c61f594eda7ecccb1d94f1325f8bd098eefcb8d625",
+  "patch": "scripts/patch-mtk-drm.py",
+  "device_test_passed": false
+}

@@ -1,11 +1,12 @@
 # OrangeFox 云编译工程：realme X7 Pro / RMX2121CN
 
-状态：**新版 atomic DRM、触摸、ADB、冷启动自动解密和 MTP 已实机通过。fastbootd 经临时 USB 描述符修复及 Windows 驱动安装后可连接并退出；描述符修复固化后仍需新构建验证。**
+状态：**当前 RMX2121CN 自制 ROM 下，完整显示、触摸、ADB、冷启动自动解密、MTP、fastbootd 进出和 Android 启动均已实机通过。最终 OrangeFox 已留在 recovery 分区。**
 
-已测试构建：[Actions 第 5 轮](https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37275097258)，
-编译提交 `d1c835adc1b70566e7e9fcca25d3e52c254d5546`。
+已测试构建：[Actions 第 6 轮](https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37282885690)，
+编译提交 `cb23f7d0225a0262c8b34cf1f8665696bf0c27a9`。
 安装包为 `OrangeFox-R12.0_FBEv1-CN-Unofficial-RMX2121.zip`。
-详见 [第三轮实机测试](THIRD-DEVICE-TEST.md)。当前仍是测试候选，尚未完成全部验证。
+详见 [最终实机验证](FINAL-DEVICE-TEST.md)。离线报告、SHA256 和实机结果在 `reports/build-6/`。
+该结果针对当前设备和 ROM；安装 ZIP 内镜像与实机验证的镜像完全一致。
 
 适配目标是本机自制 ColorOS 移植 ROM：系统声明 Android 17 / API 37，vendor 为
 Android 12 / API 31，内核 4.14.186+。设备为 A-only，独立 recovery 分区 128 MiB，
@@ -50,7 +51,7 @@ init、USB、VINTF 文本配置存在上游版本差异；这些配置采用公�
 报告左黑右显示的半屏问题。解密在原 TWRP 和候选中均未确认成功；详见
 [首次测试记录](FIRST-DEVICE-TEST.md)。首版候选不能作为稳定版本使用。
 
-下一版保留新版 atomic DRM，通过 `scripts/patch-mtk-drm.py` 为 MediaTek 驱动选择
+当前构建保留新版 atomic DRM，通过 `scripts/patch-mtk-drm.py` 为 MediaTek 驱动选择
 支持当前屏幕 CRTC 的一个全宽主平面，由内核处理硬件 dual-pipe 分割，避免 SDE
 默认两个用户态平面的半屏异常。补丁严格检查输入源码哈希，并保存输出哈希，
 第 4 轮已实机确认完整显示与触摸。`vendor-tools/recovery-legacy-drm/` 的旧版 TeamWin 实现只保留
@@ -61,7 +62,7 @@ init、USB、VINTF 文本配置存在上游版本差异；这些配置采用公�
 system_ext、my_manifest、my_bigball 的 ext4/EROFS logical 挂载项。原始 fstab/flags 保留。运行时在 userdata DE 初始化前只读读取系统版本和 SPL，
 配置内存属性并重启 Keymaster/keystore2；移除设备和通用 init 重复的 fastboot USB action。
 第 5 轮已确认自动解密成功。fastboot 模式关闭不兼容的 Microsoft OS 描述符，
-ADB/MTP 模式恢复该选项；此补丁固化后的 fastbootd 进出仍需验证。
+ADB/MTP 模式恢复该选项；第 6 轮已确认无需手动 USB 属性修改即可连接 fastbootd 并返回。
 沿用 recovery 最小源码清单需要的 `ALLOW_MISSING_DEPENDENCIES=true`；实际编译目标
 及镜像仍需通过构建和产物检查。移除了无源码、且预编译设备 blobs 未引用的
 `ashmemd_aidl_interface-cpp` 和 `libashmemd_client` 两项历史依赖。
