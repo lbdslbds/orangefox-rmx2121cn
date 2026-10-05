@@ -3,6 +3,7 @@ import gzip
 import hashlib
 import json
 import pathlib
+import re
 import shutil
 import struct
 import sys
@@ -73,8 +74,18 @@ def main():
             markers = {n: b"RMX2121" in archive.read(n) for n in installer_files}
             if not any(markers.values()):
                 raise ValueError("RMX2121 target is absent from the installer scripts")
+            installer = archive.read("META-INF/com/google/android/update-binary").decode("utf-8")
+            target = re.search(r'^TARGET_DEVICE="([^"]+)"$', installer, re.M)
+            alternatives = re.search(r'^TARGET_DEVICE_ALT="([^"]*)"$', installer, re.M)
+            if not target or target.group(1) != "RMX2121" or not alternatives:
+                raise ValueError("Unexpected installer device assertions")
+            accepted = {target.group(1), *re.split(r"[,\s]+", alternatives.group(1))}
+            accepted.discard("")
+            if accepted != {"RMX2121", "RMX2121CN"}:
+                raise ValueError("Installer must accept only RMX2121 and RMX2121CN")
             zip_reports.append({"file": path.name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
-                                "embedded_image": embedded, "installer_target_markers": markers})
+                                "embedded_image": embedded, "installer_target_markers": markers,
+                                "accepted_devices": sorted(accepted)})
     # Publish to Actions artifacts only after structural checks succeed.
     shutil.copy2(image_path, output / "OrangeFox-RMX2121CN-candidate.img")
     for path in archives:

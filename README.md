@@ -47,7 +47,14 @@ Android 12 / API 31，内核 4.14.186+。设备为 A-only，独立 recovery 分�
 其内核、DTB、DTBO 与本地 TWRP 镜像备份完全一致；93/94 个预编译二进制/固件
 与备份一致。不同的是 fastboot HAL，采用公开设备树当前版本，需实机验证。
 init、USB、VINTF 文本配置存在上游版本差异；这些配置采用公开设备树版本。
-目前未核对手机当前 recovery 分区与备份是否相同，也未确认用户报告的解密状态。
+首次实机测试已确认当前 recovery 分区与备份相同，候选可启动且 ADB 正常，但用户
+报告左黑右显示的半屏问题。解密在原 TWRP 和候选中均未确认成功；详见
+[首次测试记录](FIRST-DEVICE-TEST.md)。首版候选不能作为稳定版本使用。
+
+下一版使用 `vendor-tools/recovery-legacy-drm/` 中固定 TeamWin 提交的旧版 DRM
+显示实现，保留源文件的版权声明。`build.sh` 校验其 SHA256 后替换源码 checkout 中
+的同名文件；来源在该目录的 `PROVENANCE.json`。这是针对 MT6889 的兼容测试，
+需要重新实机验证。安装 ZIP 接受 RMX2121 和 RMX2121CN，产物检查会核对完整断言。
 
 新增 `vendorsetup.sh`，导出 OrangeFox 所需配置，使用 vanilla 模式和 Keymaster 4.1。
 移除 TWRP 的 Y/H 偏移，设置 OrangeFox 2400 屏幕高度。为本地移植 ROM 增加

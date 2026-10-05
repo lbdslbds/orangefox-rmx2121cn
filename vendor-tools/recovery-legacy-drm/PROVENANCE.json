@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/TeamWin/android_bootable_recovery",
+  "commit": "e4a84df75cfedc1c6d022baa7037845ece360ddc",
+  "path": "minuitwrp/graphics_drm.cpp",
+  "sha256": "c6cfe03470b9b141bfc7659b4e119921878a18c0b59759be96b465bbee272b73",
+  "modifications": "None; build.sh installs this file into the OrangeFox source checkout before compilation.",
+  "reason": "First real-device test booted with working ADB but rendered only the right half of the display using the current atomic/SDE plane implementation. Test the legacy KMS backend used in the TWRP 3.7.0 era."
+}

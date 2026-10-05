@@ -2,6 +2,7 @@
 # OrangeFox candidate for RMX2121CN, legacy FBE v1 / Trustonic 4.1.
 # These variables must be exported before lunch and the build command.
 export FOX_BUILD_DEVICE=RMX2121
+export FOX_TARGET_DEVICES="RMX2121,RMX2121CN"
 export FOX_VARIANT=FBEv1-CN
 export TARGET_ARCH=arm64
 export FOX_VANILLA_BUILD=1
