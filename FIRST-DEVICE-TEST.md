@@ -12,6 +12,8 @@
 - ZIP 的断言只接受 RMX2121，而当前 TWRP 的 ro.product.device 是 RMX2121CN；首次使用镜像测试，没有安装这个 ZIP。
 - 半屏问题出现后回刷原 TWRP。未格式化或擦除数据，未刷写 boot、super、vbmeta 等其他分区。
 
-修复候选改为固定提交的 TeamWin 旧版 DRM backend，并将官方 ZIP 的可接受机型明确限定为 RMX2121/RMX2121CN。这些改动需要重新编译和实机验证。
+修复候选保留当前 OrangeFox atomic DRM backend：识别 MediaTek 驱动后，选择支持当前 CRTC 的 primary plane，使用全屏宽度，让内核处理硬件 dual-pipe 分割；不套用 SDE 的用户态分平面逻辑。补丁在 `scripts/patch-mtk-drm.py`，按输入源码哈希校验，构建保存补丁后哈希。没有可用主平面时返回失败，允许现有图形层尝试其他 backend。
+
+官方 ZIP 的可接受机型明确限定为 RMX2121/RMX2121CN。这些改动需要重新编译和实机验证。旧 TeamWin DRM 源码只保留作后续对照，当前构建不使用它。
 
 原始日志仅保存在本地，不随公开工程上传。

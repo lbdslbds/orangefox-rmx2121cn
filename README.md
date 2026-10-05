@@ -51,10 +51,11 @@ init、USB、VINTF 文本配置存在上游版本差异；这些配置采用公�
 报告左黑右显示的半屏问题。解密在原 TWRP 和候选中均未确认成功；详见
 [首次测试记录](FIRST-DEVICE-TEST.md)。首版候选不能作为稳定版本使用。
 
-下一版使用 `vendor-tools/recovery-legacy-drm/` 中固定 TeamWin 提交的旧版 DRM
-显示实现，保留源文件的版权声明。`build.sh` 校验其 SHA256 后替换源码 checkout 中
-的同名文件；来源在该目录的 `PROVENANCE.json`。这是针对 MT6889 的兼容测试，
-需要重新实机验证。安装 ZIP 接受 RMX2121 和 RMX2121CN，产物检查会核对完整断言。
+下一版保留新版 atomic DRM，通过 `scripts/patch-mtk-drm.py` 为 MediaTek 驱动选择
+支持当前屏幕 CRTC 的一个全宽主平面，由内核处理硬件 dual-pipe 分割，避免 SDE
+默认两个用户态平面的半屏异常。补丁严格检查输入源码哈希，并保存输出哈希，
+需要重新实机验证。`vendor-tools/recovery-legacy-drm/` 的旧版 TeamWin 实现只保留
+作对照，当前构建不使用。安装 ZIP 接受 RMX2121 和 RMX2121CN，产物检查会核对完整断言。
 
 新增 `vendorsetup.sh`，导出 OrangeFox 所需配置，使用 vanilla 模式和 Keymaster 4.1。
 移除 TWRP 的 Y/H 偏移，设置 OrangeFox 2400 屏幕高度。为本地移植 ROM 增加

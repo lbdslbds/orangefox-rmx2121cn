@@ -7,11 +7,6 @@ build_root=${1:?Usage: bash scripts/build.sh /absolute/fox_12.1}
 (( EUID != 0 )) || { echo "Build as a normal user, not root" >&2; exit 1; }
 test -f "$build_root/bootable/recovery/orangefox.mk"
 test -d "$build_root/vendor/recovery"
-# This MT6889 kernel works with the legacy KMS path; the newer SDE-style
-# atomic backend splits the display into planes and rendered only the right half.
-legacy_drm="$project_dir/vendor-tools/recovery-legacy-drm/graphics_drm.cpp"
-printf '%s  %s\n' c6cfe03470b9b141bfc7659b4e119921878a18c0b59759be96b465bbee272b73 "$legacy_drm" | sha256sum --check --status
-cp "$legacy_drm" "$build_root/bootable/recovery/minuitwrp/graphics_drm.cpp"
 destination="$build_root/device/realme/RMX2121"
 if [[ -e "$destination" ]]; then
   diff -qr "$project_dir/device/realme/RMX2121" "$destination" || {
@@ -27,7 +22,9 @@ find "$destination/recovery/root/vendor/bin" -type f -exec chmod 0755 {} +
 output_dir=${ARTIFACT_DIR:-"$project_dir/artifacts"}
 mkdir -p "$output_dir"
 python3 "$project_dir/scripts/verify-source.py" "$destination" "$project_dir/provenance.json" > "$output_dir/source-check.json"
-cp "$project_dir/vendor-tools/recovery-legacy-drm/PROVENANCE.json" "$output_dir/graphics-source.json"
+# Retain the current atomic backend. On MTK the kernel splits a full-width
+# primary plane into hardware pipes; userspace must not split it into SDE planes.
+python3 "$project_dir/scripts/patch-mtk-drm.py" "$build_root/bootable/recovery/minuitwrp/graphics_drm.cpp" > "$output_dir/graphics-source.json"
 cd "$build_root"
 export FOX_BUILD_DEVICE=RMX2121
 export LC_ALL=C
