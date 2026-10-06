@@ -11,17 +11,23 @@
   "fastbootd_exit_recovery_passed": true,
   "post_fastbootd_decryption_passed": true,
   "post_fastbootd_mtp_passed": true,
-  "cold_boot_battery_samples": 6,
-  "post_fastbootd_battery_samples": 6,
+  "cold_boot_battery_samples": 12,
+  "post_fastbootd_battery_samples": 12,
   "kernel_battery_levels": [
+    98,
     100
   ],
   "battery_display_matches_kernel": true,
   "kernel_battery_status": "Not charging",
   "false_charging_indicator_removed": true,
-  "non_full_capacity_verified": false,
-  "fully_validated": false,
-  "remaining": "Actual battery below 100% and final user display/touch confirmation",
+  "non_full_capacity_verified": true,
+  "fully_validated": true,
   "actions_annotations": 0,
-  "android_boot_completed": true
+  "android_boot_completed": true,
+  "display_passed": true,
+  "touch_passed": true,
+  "user_battery_display_confirmed": true,
+  "final_recovery_retained": true,
+  "completed_utc": "2026-10-06T05:50:08.600065+00:00",
+  "scope": "Physical RMX2121CN and current ROM/credential configuration. Battery GUI matches kernel readings; no calibration claim. Hardware keys deferred."
 }

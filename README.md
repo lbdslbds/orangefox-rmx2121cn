@@ -1,15 +1,13 @@
 # OrangeFox 云编译工程：realme X7 Pro / RMX2121CN
 
-2026-10-06 电量修复第 7 轮已编译并刷入。假充电标志已消除，解密、MTP、fastbootd 回归通过；实际电量低于 100% 时的百分比仍待验证。
-详见 [电量检查与修复](BATTERY-DEVICE-TEST.md)。下述第 6 轮验证范围不包括电量显示。
+状态：**当前 RMX2121CN 自制 ROM 下，电量显示、完整显示、触摸、ADB、冷启动自动解密、MTP、fastbootd 进出和 Android 启动均已实机通过。第 7 轮 OrangeFox 已留在 recovery 分区。**
 
-状态：**当前 RMX2121CN 自制 ROM 下，完整显示、触摸、ADB、冷启动自动解密、MTP、fastbootd 进出和 Android 启动均已实机通过。最终 OrangeFox 已留在 recovery 分区。**
-
-已测试构建：[Actions 第 6 轮](https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37282885690)，
-编译提交 `cb23f7d0225a0262c8b34cf1f8665696bf0c27a9`。
+最新已测试构建：[Actions 第 7 轮](https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37409696589)，
+编译提交 `08024619e4771e15a29dc23186c37c59b4113cd0`。
 安装包为 `OrangeFox-R12.0_FBEv1-CN-Unofficial-RMX2121.zip`。
-详见 [最终实机验证](FINAL-DEVICE-TEST.md)。离线报告、SHA256 和实机结果在 `reports/build-6/`。
-该结果针对当前设备和 ROM；安装 ZIP 内镜像与实机验证的镜像完全一致。
+本轮修复读取电量服务失败导致的固定 100% 和假充电标志，实机在 100% 和 98% 下均与内核读数一致。
+详见 [电量修复与第 7 轮验证](BATTERY-DEVICE-TEST.md)及 [reports/build-7](reports/build-7)。
+先前核心功能验证保存在 [第 6 轮实机记录](FINAL-DEVICE-TEST.md)。结果限于当前设备、ROM 和凭据配置。
 
 适配目标是本机自制 ColorOS 移植 ROM：系统声明 Android 17 / API 37，vendor 为
 Android 12 / API 31，内核 4.14.186+。设备为 A-only，独立 recovery 分区 128 MiB，

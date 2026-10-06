@@ -1,5 +1,7 @@
 # RMX2121CN 最终实机验证（2026-10-05）
 
+2026-10-06 更新：最新最终版为第 7 轮，额外修复并验证电量显示；见 [电量修复与最新验证](BATTERY-DEVICE-TEST.md)。以下保留第 6 轮历史结果。
+
 当前这台 realme X7 Pro / RMX2121CN 的自制 ROM 下，约定的实机验证项目全部通过。
 OrangeFox R12.0 FBEv1-CN Unofficial 保留新版 atomic DRM；最终镜像已留在 recovery 分区，Android 正常启动。
 

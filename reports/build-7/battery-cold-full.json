@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "read_only": true,
+  "samples": [
+    {
+      "utc": "2026-10-06T05:28:22.949847+00:00",
+      "kernel_capacity": 100,
+      "kernel_capacity_after": 100,
+      "kernel_status": "Not charging",
+      "kernel_status_after": "Not charging",
+      "gui_capacity": 100,
+      "gui_charge_text": "100%",
+      "gui_charging": false,
+      "stable": true,
+      "matches": true
+    },
+    {
+      "utc": "2026-10-06T05:28:26.904461+00:00",
+      "kernel_capacity": 100,
+      "kernel_capacity_after": 100,
+      "kernel_status": "Not charging",
+      "kernel_status_after": "Not charging",
+      "gui_capacity": 100,
+      "gui_charge_text": "100%",
+      "gui_charging": false,
+      "stable": true,
+      "matches": true
+    },
+    {
+      "utc": "2026-10-06T05:28:30.768184+00:00",
+      "kernel_capacity": 100,
+      "kernel_capacity_after": 100,
+      "kernel_status": "Not charging",
+      "kernel_status_after": "Not charging",
+      "gui_capacity": 100,
+      "gui_charge_text": "100%",
+      "gui_charging": false,
+      "stable": true,
+      "matches": true
+    },
+    {
+      "utc": "2026-10-06T05:28:33.983052+00:00",
+      "kernel_capacity": 100,
+      "kernel_capacity_after": 100,
+      "kernel_status": "Not charging",
+      "kernel_status_after": "Not charging",
+      "gui_capacity": 100,
+      "gui_charge_text": "100%",
+      "gui_charging": false,
+      "stable": true,
+      "matches": true
+    },
+    {
+      "utc": "2026-10-06T05:28:37.888658+00:00",
+      "kernel_capacity": 100,
+      "kernel_capacity_after": 100,
+      "kernel_status": "Not charging",
+      "kernel_status_after": "Not charging",
+      "gui_capacity": 100,
+      "gui_charge_text": "100%",
+      "gui_charging": false,
+      "stable": true,
+      "matches": true
+    },
+    {
+      "utc": "2026-10-06T05:28:41.776501+00:00",
+      "kernel_capacity": 100,
+      "kernel_capacity_after": 100,
+      "kernel_status": "Not charging",
+      "kernel_status_after": "Not charging",
+      "gui_capacity": 100,
+      "gui_charge_text": "100%",
+      "gui_charging": false,
+      "stable": true,
+      "matches": true
+    }
+  ]
+}
