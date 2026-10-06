@@ -38,6 +38,10 @@ def inspect_runtime(data, expected_script):
         raise ValueError("ROM property helper missing or differs from source")
     if ("/system/bin/sh /" + helper).encode() not in files["system/bin/recovery"]:
         raise ValueError("Pre-decryption runtime hook absent from compiled recovery")
+    battery_paths = (b"/sys/class/power_supply/battery/capacity",
+                     b"/sys/class/power_supply/battery/status")
+    if not all(path in files["system/bin/recovery"] for path in battery_paths):
+        raise ValueError("Direct battery capacity/status reader absent from recovery")
     generic = files["system/etc/init/hw/init.rc"].decode()
     device_usb = files["init.recovery.usb.rc"].decode()
     device_hal = files["init.recovery.mt6889.rc"].decode()
@@ -55,7 +59,8 @@ def inspect_runtime(data, expected_script):
         raise ValueError("Fastboot USB must disable unsupported Microsoft OS descriptors")
     return {"helper_sha256": hashlib.sha256(expected_script).hexdigest(),
             "pre_decryption_hook_present": True, "single_fastboot_usb_action": True,
-            "fastboot_ms_os_descriptors_disabled": True}
+            "fastboot_ms_os_descriptors_disabled": True,
+            "direct_battery_reader_present": True}
 
 
 def inspect_image(data, provenance):

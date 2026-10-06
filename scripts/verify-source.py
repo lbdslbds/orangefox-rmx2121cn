@@ -21,6 +21,7 @@ assert "BOARD_RECOVERYIMAGE_PARTITION_SIZE := 134217728" in board
 assert "BOARD_BOOT_HEADER_VERSION := 2" in board
 assert "TW_INCLUDE_CRYPTO_FBE := true" in board
 assert "TW_USE_FSCRYPT_POLICY := 1" in board
+assert "TW_USE_LEGACY_BATTERY_SERVICES := true" in board
 fstab = (tree / "recovery/root/system/etc/recovery.fstab").read_text()
 for name in ("system_ext", "my_manifest", "my_bigball"):
     assert f"{name} /{name} erofs" in fstab

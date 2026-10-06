@@ -1,5 +1,8 @@
 # OrangeFox 云编译工程：realme X7 Pro / RMX2121CN
 
+2026-10-06 补充检查发现第 6 轮电量显示固定为 100% 的问题，修复编译和实机验证进行中。
+详见 [电量检查与修复](BATTERY-DEVICE-TEST.md)。下述第 6 轮验证范围不包括电量显示。
+
 状态：**当前 RMX2121CN 自制 ROM 下，完整显示、触摸、ADB、冷启动自动解密、MTP、fastbootd 进出和 Android 启动均已实机通过。最终 OrangeFox 已留在 recovery 分区。**
 
 已测试构建：[Actions 第 6 轮](https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37282885690)，

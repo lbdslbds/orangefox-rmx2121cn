@@ -158,6 +158,9 @@ TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone3/temp
+# Health HAL discovery is unavailable after the device's decryption teardown.
+# Read the verified MTK battery capacity/status sysfs nodes directly.
+TW_USE_LEGACY_BATTERY_SERVICES := true
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 1200
 TW_NO_SCREEN_BLANK := true
