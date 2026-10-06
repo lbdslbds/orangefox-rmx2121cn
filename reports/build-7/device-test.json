@@ -1,0 +1,27 @@
+{
+  "build_run": "37409696589",
+  "build_commit": "08024619e4771e15a29dc23186c37c59b4113cd0",
+  "image_sha256": "0f47ef0d4ed7fbdf7ef71aa01293c31196460ea05cb9b5bb6653e320676ac4e5",
+  "recovery_only_installation": true,
+  "offline_checks_passed": true,
+  "flashed_partition_hash_matches": true,
+  "cold_boot_decryption_passed": true,
+  "cold_boot_mtp_passed": true,
+  "fastbootd_query_passed": true,
+  "fastbootd_exit_recovery_passed": true,
+  "post_fastbootd_decryption_passed": true,
+  "post_fastbootd_mtp_passed": true,
+  "cold_boot_battery_samples": 6,
+  "post_fastbootd_battery_samples": 6,
+  "kernel_battery_levels": [
+    100
+  ],
+  "battery_display_matches_kernel": true,
+  "kernel_battery_status": "Not charging",
+  "false_charging_indicator_removed": true,
+  "non_full_capacity_verified": false,
+  "fully_validated": false,
+  "remaining": "Actual battery below 100% and final user display/touch confirmation",
+  "actions_annotations": 0,
+  "android_boot_completed": true
+}
