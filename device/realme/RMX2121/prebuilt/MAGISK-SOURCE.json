@@ -1,0 +1,10 @@
+{
+  "file": "Magisk-v30.7.apk",
+  "version": "30.7",
+  "version_code": 30700,
+  "sha256": "e0d32d2123532860f97123d927b1bb86c4e08e6fd8a48bfc6b5bee0afae9ebd5",
+  "official_asset": "https://github.com/topjohnwu/Magisk/releases/download/v30.7/Magisk-v30.7.apk",
+  "release_and_source": "https://github.com/topjohnwu/Magisk/releases/tag/v30.7",
+  "license": "GPL-3.0",
+  "note": "Unmodified official asset; its digest also matches the addon included in OrangeFox build 7."
+}

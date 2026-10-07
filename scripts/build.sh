@@ -26,6 +26,9 @@ python3 "$project_dir/scripts/verify-source.py" "$destination" "$project_dir/pro
 # primary plane into hardware pipes; userspace must not split it into SDE planes.
 python3 "$project_dir/scripts/patch-mtk-drm.py" "$build_root/bootable/recovery/minuitwrp/graphics_drm.cpp" > "$output_dir/graphics-source.json"
 python3 "$project_dir/scripts/patch-recovery-runtime.py" "$build_root/bootable/recovery" > "$output_dir/runtime-source.json"
+g++ -std=c++17 -Wno-deprecated-declarations "$project_dir/scripts/test-magisk-policy.cpp" -lcrypto -o "$output_dir/test-magisk-policy"
+"$output_dir/test-magisk-policy" "$destination/prebuilt/Magisk-v30.7.apk" > "$output_dir/magisk-policy-test.txt"
+python3 "$project_dir/scripts/patch-magisk-addon.py" "$build_root/bootable/recovery" > "$output_dir/magisk-addon-source.json"
 cd "$build_root"
 export FOX_BUILD_DEVICE=RMX2121
 export LC_ALL=C

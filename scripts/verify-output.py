@@ -11,7 +11,7 @@ import sys
 import zipfile
 
 
-def ramdisk_files(archive):
+def ramdisk_files(archive, include_symlinks=False):
     files = {}
     pos = 0
     while pos + 110 <= len(archive):
@@ -24,7 +24,7 @@ def ramdisk_files(archive):
         pos = (pos + fields[6] + 3) & ~3
         if name == "TRAILER!!!":
             return files
-        if stat.S_ISREG(fields[1]):
+        if stat.S_ISREG(fields[1]) or (include_symlinks and stat.S_ISLNK(fields[1])):
             files[name.removeprefix("./")] = contents
     raise ValueError("Missing newc trailer")
 
@@ -42,6 +42,18 @@ def inspect_runtime(data, expected_script):
                      b"/sys/class/power_supply/battery/status")
     if not all(path in files["system/bin/recovery"] for path in battery_paths):
         raise ValueError("Direct battery capacity/status reader absent from recovery")
+    addon_path = "FFiles/OF_Magisk/Magisk.zip"
+    addon_hash = "e0d32d2123532860f97123d927b1bb86c4e08e6fd8a48bfc6b5bee0afae9ebd5"
+    if hashlib.sha256(files.get(addon_path, b"")).hexdigest() != addon_hash:
+        raise ValueError("Pinned official Magisk addon absent from recovery ramdisk")
+    entries = ramdisk_files(gzip.decompress(data[offset:offset + rsize]), include_symlinks=True)
+    uninstall = entries.get("FFiles/OF_Magisk/uninstall.zip", b"")
+    if uninstall != b"/FFiles/OF_Magisk/Magisk.zip" and hashlib.sha256(uninstall).hexdigest() != addon_hash:
+        raise ValueError("Bundled Magisk uninstall alias missing or differs")
+    if b"/OF_Magisk" not in files["system/bin/recovery"]:
+        raise ValueError("Compiled GUI Magisk ramdisk path absent")
+    if b"Bundled Magisk SHA256 verified." not in files["system/bin/recovery"]:
+        raise ValueError("Pinned Magisk integrity policy absent from compiled recovery")
     generic = files["system/etc/init/hw/init.rc"].decode()
     device_usb = files["init.recovery.usb.rc"].decode()
     device_hal = files["init.recovery.mt6889.rc"].decode()
@@ -60,7 +72,9 @@ def inspect_runtime(data, expected_script):
     return {"helper_sha256": hashlib.sha256(expected_script).hexdigest(),
             "pre_decryption_hook_present": True, "single_fastboot_usb_action": True,
             "fastboot_ms_os_descriptors_disabled": True,
-            "direct_battery_reader_present": True}
+            "direct_battery_reader_present": True,
+            "bundled_magisk_sha256": addon_hash,
+            "bundled_magisk_uninstall_alias_present": True}
 
 
 def inspect_image(data, provenance):

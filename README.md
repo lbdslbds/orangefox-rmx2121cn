@@ -1,5 +1,7 @@
 # OrangeFox 云编译工程：realme X7 Pro / RMX2121CN
 
+2026-10-07：正在修复内置 Magisk 缺包和 OTA 签名校验不兼容的问题，详见 [Magisk 修复记录](MAGISK-DEVICE-TEST.md)。第 7 轮以下验证不包含实际 root 安装。
+
 状态：**当前 RMX2121CN 自制 ROM 下，电量显示、完整显示、触摸、ADB、冷启动自动解密、MTP、fastbootd 进出和 Android 启动均已实机通过。第 7 轮 OrangeFox 已留在 recovery 分区。**
 
 最新已测试构建：[Actions 第 7 轮](https://github.com/lbdslbds/orangefox-rmx2121cn/actions/runs/37409696589)，

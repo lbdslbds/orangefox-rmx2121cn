@@ -22,6 +22,11 @@ assert "BOARD_BOOT_HEADER_VERSION := 2" in board
 assert "TW_INCLUDE_CRYPTO_FBE := true" in board
 assert "TW_USE_FSCRYPT_POLICY := 1" in board
 assert "TW_USE_LEGACY_BATTERY_SERVICES := true" in board
+addon = tree / "prebuilt/Magisk-v30.7.apk"
+assert hashlib.sha256(addon.read_bytes()).hexdigest() == "e0d32d2123532860f97123d927b1bb86c4e08e6fd8a48bfc6b5bee0afae9ebd5"
+setup = (tree / "vendorsetup.sh").read_text()
+assert "export FOX_MOVE_MAGISK_INSTALLER_TO_RAMDISK=1" in setup
+assert "prebuilt/Magisk-v30.7.apk" in setup
 fstab = (tree / "recovery/root/system/etc/recovery.fstab").read_text()
 for name in ("system_ext", "my_manifest", "my_bigball"):
     assert f"{name} /{name} erofs" in fstab
