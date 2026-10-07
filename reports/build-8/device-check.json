@@ -22,6 +22,16 @@
   "ordinary_signature_setting_at_start": 0,
   "ordinary_signature_setting_changed": false,
   "runtime_install_with_signature_setting_enabled_tested": false,
-  "root_install_tested": false,
-  "scope": "This physical RMX2121CN and current ROM; addon integrity policy host-tested and image-verified. Actual Magisk installer execution and root remain untested."
+  "root_install_tested": true,
+  "scope": "This physical RMX2121CN and current ROM. User-operated built-in installation completed, Magisk-patched boot and Android startup confirmed. Original boot restored at user request. Actual installer execution with ordinary ZIP signature setting enabled remains untested.",
+  "user_reported_builtin_install_completed": true,
+  "magisk_patched_boot_ramdisk_confirmed": true,
+  "android_boot_after_user_install_passed": true,
+  "root_su_permissions_tested": false,
+  "agent_ran_magisk_installer": false,
+  "original_boot_restored_on_explicit_user_request": true,
+  "boot_restore_partition_readback_passed": true,
+  "recovery_retained_after_boot_restore": true,
+  "android_after_boot_restore_passed": true,
+  "root_install_test_scope": "User-operated built-in installer; patched boot ramdisk and Android startup verified; su not tested."
 }

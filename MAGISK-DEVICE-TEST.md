@@ -41,21 +41,28 @@ The device GUI points to `/FFiles/OF_Magisk`, displays version 30.7 and reaches
 the built-in confirmation page. Both package paths match the pinned official
 asset digest. Automatic decryption, ADB, MTP in both directions, userspace
 fastboot queries and returning to recovery passed without manual USB changes.
-The real boot partition remains unchanged.
+The boot partition was unchanged throughout these agent-operated recovery checks.
 
 During concurrent user navigation and CLI battery queries, the GUI became
 unresponsive while its main thread waited on a FIFO open. Recovery reboot
 restored access to the confirmation page. GUI CLI queries have been stopped;
 the user subsequently confirmed normal full-screen display, touch and a 53%
 GUI battery reading matching the real kernel capacity after fastbootd return.
-Android completed normal startup and build 8 remains installed. This is not
-evidence that Magisk executed. The ordinary ZIP signature
+Android completed normal startup and build 8 remains installed. At that point
+the agent had not executed Magisk. The ordinary ZIP signature
 setting was already disabled at the start of this device session and was not
 changed by the agent; runtime installation with that setting enabled remains
 untested. Sanitized offline reports are in `reports/build-8`.
-Actual root installation is not yet tested. Existing recovery-only
-testing scope does not authorize running an installer that writes boot. Battery,
-atomic DRM, decryption and USB fixes are retained. Raw device logs remain local.
+The user subsequently reported completing the built-in installation. Android
+completed normal startup afterward. A private read-only backup of the resulting
+boot image contains both `.backup/.magisk` and `overlay.d/sbin/magisk.xz`,
+confirming a Magisk-patched boot ramdisk. Root permissions through `su` were not
+tested by the agent. The user then explicitly requested restoration of the
+pre-install boot. That exact 32 MiB backup was restored and its partition
+readback SHA256 matched; the build 8 recovery partition remained unchanged.
+Post-restoration Android completed normal startup. The agent never ran
+Magisk installation/uninstallation or removed its data files. Battery, atomic
+DRM, decryption and USB fixes are retained. Boot images and raw logs remain local.
 
 Official package/source: [Magisk v30.7](https://github.com/topjohnwu/Magisk/releases/tag/v30.7).
 Magisk documents recovery installation as a deprecated method that requires a
