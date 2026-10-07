@@ -1,0 +1,8 @@
+{
+  "upstream_sha256": "7c7c27e8d7ed0a8f48132482364bf82bed46e3a34be3534c996d0e71aff1686e",
+  "patched_sha256": "ccf0c289e03c337cededead2b6bd941e4995f9d5ca85b0547a69ebee92ed2f89",
+  "policy_header_sha256": "8dd47312778abd1ed4e225ed2d6b81b608385356d7ff0093fc2758567bf99e2b",
+  "ordinary_zip_signature_setting_unchanged": true,
+  "bundled_magisk_integrity_always_required": true,
+  "root_install_tested": false
+}

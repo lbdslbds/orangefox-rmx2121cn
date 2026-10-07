@@ -1,0 +1,55 @@
+{
+  "image": {
+    "bytes": 134217728,
+    "sha256": "448a44afb7daca00d1d104e61842ba9fd84badd0279bd8510bee6191d5aea9e1",
+    "header_version": 2,
+    "page_size": 2048,
+    "ramdisk_size": 46987614,
+    "boot_components": {
+      "kernel": "16aa83fe3fcff046ab57aa17300df75e959bc8df50fc2143704925eda84dac7e",
+      "dtbo": "6d99889b0f9774bf5aeb6e3a732b88cb0e567802f6b74cf7ef67a9c70a686649",
+      "dtb": "11c7a94d35c97a9c6c69c4462c87e3e5195520c46747f36137f2cfc8152695ae"
+    },
+    "orangefox_marker_present": true
+  },
+  "runtime": {
+    "helper_sha256": "909a34b191399af75b1bcd3d91608c5b6625e7d6247db44d155cafba63afc574",
+    "pre_decryption_hook_present": true,
+    "single_fastboot_usb_action": true,
+    "fastboot_ms_os_descriptors_disabled": true,
+    "direct_battery_reader_present": true,
+    "bundled_magisk_sha256": "e0d32d2123532860f97123d927b1bb86c4e08e6fd8a48bfc6b5bee0afae9ebd5",
+    "bundled_magisk_uninstall_alias_present": true
+  },
+  "installers": [
+    {
+      "file": "OrangeFox-R12.0_FBEv1-CN-Unofficial-RMX2121.zip",
+      "sha256": "89a46bdc6564356cc931bf934b6135f4bb6ee84657223ede30f433b0c2c01c81",
+      "embedded_image": {
+        "bytes": 134217728,
+        "sha256": "448a44afb7daca00d1d104e61842ba9fd84badd0279bd8510bee6191d5aea9e1",
+        "header_version": 2,
+        "page_size": 2048,
+        "ramdisk_size": 46987614,
+        "boot_components": {
+          "kernel": "16aa83fe3fcff046ab57aa17300df75e959bc8df50fc2143704925eda84dac7e",
+          "dtbo": "6d99889b0f9774bf5aeb6e3a732b88cb0e567802f6b74cf7ef67a9c70a686649",
+          "dtb": "11c7a94d35c97a9c6c69c4462c87e3e5195520c46747f36137f2cfc8152695ae"
+        },
+        "orangefox_marker_present": true
+      },
+      "installer_target_markers": {
+        "META-INF/com/google/android/updater-script": false,
+        "META-INF/com/google/android/update-binary": true
+      },
+      "accepted_devices": [
+        "RMX2121",
+        "RMX2121CN"
+      ]
+    }
+  ],
+  "structural_checks_passed": true,
+  "boot_tested": false,
+  "decryption_tested": false,
+  "status": "Unverified test candidate"
+}

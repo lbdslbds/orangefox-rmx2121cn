@@ -1,0 +1,1 @@
+Official addon accepted; modified/truncated/unreadable data and untrusted paths rejected

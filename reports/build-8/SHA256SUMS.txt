@@ -1,0 +1,2 @@
+448a44afb7daca00d1d104e61842ba9fd84badd0279bd8510bee6191d5aea9e1  ./OrangeFox-RMX2121CN-candidate.img
+89a46bdc6564356cc931bf934b6135f4bb6ee84657223ede30f433b0c2c01c81  ./OrangeFox-R12.0_FBEv1-CN-Unofficial-RMX2121.zip

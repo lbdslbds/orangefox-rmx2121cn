@@ -33,7 +33,26 @@ and normal ZIP/OTA verification remain unchanged. Native C++ tests accept the
 official asset and reject altered, truncated and unreadable content plus
 non-built-in or external paths.
 
-Status: current addon files restored; rebuilt-image and device tests pending.
+Build 8 (Actions 37568923216, source 06e8813734c1708a2d498483536bc4f775765516)
+passed both build-time and independent local image/ZIP checks. Recovery-only
+flashing and partition readback matched SHA256
+`448a44afb7daca00d1d104e61842ba9fd84badd0279bd8510bee6191d5aea9e1`.
+The device GUI points to `/FFiles/OF_Magisk`, displays version 30.7 and reaches
+the built-in confirmation page. Both package paths match the pinned official
+asset digest. Automatic decryption, ADB, MTP in both directions, userspace
+fastboot queries and returning to recovery passed without manual USB changes.
+The real boot partition remains unchanged.
+
+During concurrent user navigation and CLI battery queries, the GUI became
+unresponsive while its main thread waited on a FIFO open. Recovery reboot
+restored access to the confirmation page. GUI CLI queries have been stopped;
+the user subsequently confirmed normal full-screen display, touch and a 53%
+GUI battery reading matching the real kernel capacity after fastbootd return.
+Android completed normal startup and build 8 remains installed. This is not
+evidence that Magisk executed. The ordinary ZIP signature
+setting was already disabled at the start of this device session and was not
+changed by the agent; runtime installation with that setting enabled remains
+untested. Sanitized offline reports are in `reports/build-8`.
 Actual root installation is not yet tested. Existing recovery-only
 testing scope does not authorize running an installer that writes boot. Battery,
 atomic DRM, decryption and USB fixes are retained. Raw device logs remain local.
